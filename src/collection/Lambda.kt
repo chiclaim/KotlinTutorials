@@ -47,6 +47,42 @@ fun main(args: Array<String>) {
     val personsAgeFunction2 = Person::age
     println("bound reference2 ${personsAgeFunction2(person)}")
 
+
+    createAllDoneRunnable().run()
+
+
+    //lambda receiver
+    println(alphabetWith())
+    println(alphabetApply())
+    println(alphabetBuildString())
+
+}
+
+fun alphabetBuildString() = buildString {
+    for (letter in 'A'..'Z') {
+        append(letter)
+    }
+    append("\nNow I know the alphabet")
+}
+
+fun alphabetApply() = StringBuilder().apply {
+    for (letter in 'A'..'Z') {
+        append(letter)
+    }
+    append("\nNow I know the alphabet")
+}.toString()
+
+//lambda receiver
+fun alphabetWith() = with(StringBuilder()) {
+    for (letter in 'A'..'Z') {
+        append(letter)
+    }
+    append("\nNow I know the alphabet!")
+    toString()
+}
+
+fun createAllDoneRunnable(): Runnable {
+    return Runnable { println("All done!") }
 }
 
 
