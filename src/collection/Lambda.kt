@@ -84,7 +84,3 @@ fun alphabetWith() = with(StringBuilder()) {
 fun createAllDoneRunnable(): Runnable {
     return Runnable { println("All done!") }
 }
-
-
-
-
