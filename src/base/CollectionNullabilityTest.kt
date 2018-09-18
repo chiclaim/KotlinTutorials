@@ -1,7 +1,7 @@
 package base
 
 /**
- * Desc: 集合和数组
+ * Desc: Kotlin集合 为空性演示
  * Created by Chiclaim on 2018/9/18.
  */
 
