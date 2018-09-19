@@ -11,6 +11,7 @@ class Person(var name: String)
 fun getPerson(): Person? = null
 
 // == 操作符 相当于Java里的equals()方法
+// === 操作符 相当于Java里的 ==
 fun equalsTest() {
     val p1 = Person("chiclaim")
     val p2 = getPerson()
@@ -25,9 +26,13 @@ fun equalsTest() {
             return first == null ? second == null : first.equals(second);
         }
      */
-}
 
-fun main(args: Array<String>) {
+    println(p2 === p1)
 
+    /*
+        === 编译后代码如下：
 
+        var2 = p2 == p1;
+        System.out.println(var2);
+     */
 }
