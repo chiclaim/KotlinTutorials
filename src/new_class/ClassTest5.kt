@@ -15,6 +15,8 @@ package new_class
 //Primary Constructor 构造方法的参数如果有val/var修饰，那么该类会生成和该参数一样的属性，以及与之对应setter和getter（如果是var修饰会有getter和setter，val修饰只有getter）
 //Secondary Constructor 构造方法的参数不能用val/var属性
 
+//Primary Constructor和 Secondary Constructor不可共存
+
 open class Person5 {
     var name: String? = null
     var id: Int = 0
