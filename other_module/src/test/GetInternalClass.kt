@@ -11,7 +11,7 @@ import new_class.Person
 fun getInternalClassFromOtherModule() {
     val p1 = Person("yuzhiqiang")
 
-    //can't resolve person7，It's internal class
-    //val p2 = Person7()
+    //can't resolve InternalClass，It's internal class
+    //val p2 = InternalClass()
 
 }
