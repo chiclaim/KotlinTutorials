@@ -8,7 +8,9 @@ class Person(val name: String) //只会生成name的getter方法
 
 /*
 
-由于name属性不可修改，所以不提供name的setter方法
+-由于name属性不可修改，所以不提供name的setter方法
+
+-Kotlin声明的class默认是public final的
 
 public final class Person {
    @NotNull
