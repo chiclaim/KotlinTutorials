@@ -1,4 +1,4 @@
-package visibility_modifier
+import visibility_modifier.InternalClass
 
 /**
  * desc: 调用当前module中internal class
@@ -10,8 +10,9 @@ package visibility_modifier
 
 fun getInternalClassFromThisModule() {
 
-    //InternalClass is a internal class
+    //InternalClass is a internal class in another package
     val p2 = InternalClass()
+    p2.getName()
 
 }
 
