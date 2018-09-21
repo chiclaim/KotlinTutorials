@@ -20,6 +20,4 @@ fun getInternalClassFromThisModule() {
 //还需要把子类也要设置成internal class，为什么要这么做呢？
 //因为子类不设置成internal class，那就间接了暴露了原来的internal class了
 //这和internal class的设计初衷是相违背的
-internal class A : InternalClass() {
-
-}
+internal class A : InternalClass()

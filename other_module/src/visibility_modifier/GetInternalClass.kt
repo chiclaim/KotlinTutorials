@@ -1,4 +1,4 @@
-package internal_class
+package visibility_modifier
 
 import base.Person
 

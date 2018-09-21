@@ -5,9 +5,16 @@ package visibility_modifier
  * Created by Chiclaim on 2018/9/21.
  */
 
-//Kotlin就算同包名下也不能继承 protected class 这和Java不一样
+//---- Kotlin就算同包名下也不能继承 protected class 这和Java不一样
 class ExtendKotlinProtectedClass //: ProtectedClassTest.ProtectedClass()
 
+//---- Kotlin就算同包名下也不能访问 protected class
+class UseKotlinProtectedClass {
+    //private var protectedClass: ProtectedClassTest.ProtectedClass? = null
+}
+
+
+//----------------------------------------------------------//
 
 //既然Kotlin不能访问和继承同包名下的 protected class，那么 protected class 不就和 private class 一样了吗？
 
