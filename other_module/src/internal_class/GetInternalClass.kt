@@ -1,15 +1,19 @@
 package internal_class
 
+import base.Person
+
 /**
- * desc: 演示调用两一个模块 internal修饰的类
+ * desc: 演示调用另一个模块的 internal 修饰的类
  *
  * Created by Chiclaim on 2018/09/20
  */
 
 fun getInternalClassFromOtherModule() {
-//    val p1 = Person("yuzhiqiang")
+    //Person class is in another module
+    val p1 = Person("yuzhiqiang")
 
-    //can't resolve InternalClass，It's internal class
+    //----Can't resolve InternalClass，It's internal class in another module
     //val p2 = InternalClass()
 
+    println(p1.name)
 }
