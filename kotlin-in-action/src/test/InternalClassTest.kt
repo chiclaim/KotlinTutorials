@@ -1,3 +1,5 @@
+package test
+
 import visibility_modifier.modifier_class.InternalClass
 
 /**
