@@ -1,6 +1,4 @@
-package internal_class
-
-import internal_class.InternalClass
+package visibility_modifier
 
 /**
  * desc: 调用当前module中internal class
