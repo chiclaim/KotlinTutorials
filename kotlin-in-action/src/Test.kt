@@ -1,5 +1,5 @@
-import base.ObjectKeywordTest
-import base.ObjectKeywordTest2
+import object_keyword.ObjectKeywordTest
+import object_keyword.ObjectKeywordTest2
 
 /**
  * Desc:

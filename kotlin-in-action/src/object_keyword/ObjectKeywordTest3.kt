@@ -1,4 +1,4 @@
-package base
+package object_keyword
 
 /**
  * Desc: companion object 自定义名称 演示

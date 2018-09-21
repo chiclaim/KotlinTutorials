@@ -1,4 +1,4 @@
-package base
+package object_keyword
 
 /**
  * Desc: companion object里声明变量、常量 演示

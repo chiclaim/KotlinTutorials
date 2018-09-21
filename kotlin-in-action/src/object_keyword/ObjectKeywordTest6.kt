@@ -1,4 +1,4 @@
-package base
+package object_keyword
 
 import java.awt.event.MouseAdapter
 import java.awt.event.MouseEvent

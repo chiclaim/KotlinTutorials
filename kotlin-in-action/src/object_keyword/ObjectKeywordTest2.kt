@@ -1,4 +1,4 @@
-package base
+package object_keyword
 
 /**
  * Desc: companion object里声明方法 演示
