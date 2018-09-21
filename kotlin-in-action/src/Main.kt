@@ -1,5 +1,5 @@
-import strings.lastChar as last
 import java.util.*
+import strings.lastChar as last
 
 fun main(args: Array<String>) {
 //    println("hello world")
