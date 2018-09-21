@@ -1,3 +1,3 @@
-## 从Java角度深入理解Kotlin
+## 从Java视角深入理解Kotlin
 
-从Java角度深入理解Kotlin
+从Java视角深入理解Kotlin
