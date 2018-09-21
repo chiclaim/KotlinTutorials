@@ -1,4 +1,4 @@
-package visibility_modifier
+package visibility_modifier.modifier_class
 
 /**
  * desc: internal修饰的class只在当前module可见

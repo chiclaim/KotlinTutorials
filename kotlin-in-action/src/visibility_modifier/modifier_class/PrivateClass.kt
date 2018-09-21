@@ -1,4 +1,4 @@
-package visibility_modifier
+package visibility_modifier.modifier_class
 
 /**
  * Desc: private class 只在当前文件可访问

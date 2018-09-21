@@ -1,4 +1,4 @@
-package visibility_modifier
+package visibility_modifier.modifier_class
 
 /**
  * Desc: 默认为 public final

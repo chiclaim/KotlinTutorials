@@ -1,4 +1,4 @@
-package visibility_modifier
+package visibility_modifier.modifier_class
 
 /**
  * Desc:
@@ -24,6 +24,6 @@ class UseKotlinProtectedClass {
 
 
 class ExtendKotlinProtectedClass2 : ProtectedClassTest() {
-    private var protectedClass: ProtectedClassTest.ProtectedClass? = null
+    private var protectedClass: ProtectedClass? = null
 }
 

@@ -1,4 +1,4 @@
-import visibility_modifier.InternalClass
+import visibility_modifier.modifier_class.InternalClass
 
 /**
  * desc: 调用当前module中internal class
