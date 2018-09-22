@@ -1,7 +1,7 @@
 package lambda
 
 /**
- * desc:
+ * desc: 修改Lambda外面的变量 演示
  *
  * Created by Chiclaim on 2018/09/22
  */
