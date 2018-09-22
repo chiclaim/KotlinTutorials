@@ -38,6 +38,7 @@ fun filterTest() {
 
 }
 
+//上面filter可以过滤元素，map可以修改集合的元素
 fun mapTest() {
 
     //收集用户的名字
