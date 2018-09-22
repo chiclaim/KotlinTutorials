@@ -1,11 +1,12 @@
 package lambda
 
 /**
- * desc: 修改Lambda外面的变量 演示
+ * desc: 修改Lambda外部的变量 演示
  *
  * Created by Chiclaim on 2018/09/22
  */
 
+//----forEach底层是通过iterator来遍历的，并不是通过内部类来实现的，所以可以修改lambda外面的变量
 fun printGoods(prefix: String, goods: List<String>) {
     var count: Int = 0
     goods.forEach { goodName ->
@@ -15,6 +16,25 @@ fun printGoods(prefix: String, goods: List<String>) {
     println("goods count: $count")
 }
 
+//---- 下面的例子把Lambda赋值给变量inc，由于在lambda中没有使用额外的参数，底层是使用Function0来实现的
+//在下面的lambda底层是通过匿名内部类来实现的，我们知道内部类是修改不了外面的变量的，那么它是如何修改外面的counter变量呢？
+//通过把外面的变量包装一层，修改的时候，通过包装对象来修改，然后返回修改后的变量值
+//在Kotlin中通过Ref包装类，如果是整型则是IntRef，如果是复杂类型则是ObjectRef
+fun printCount() {
+
+    var counter = 0
+
+    //把Lambda赋值给变量
+    val inc = {
+        ++counter
+    }
+
+    println(inc())
+
+}
+
 fun main(args: Array<String>) {
     printGoods("china", listOf("telephone", "tv"))
+
+    printCount()
 }
