@@ -32,6 +32,26 @@ fun printCount() {
     println(inc())
 
 }
+/*
+   public static final void printCount() {
+      final IntRef counter = new IntRef();
+      counter.element = 0;
+      Function0 inc = (Function0)(new Function0() {
+         public Object invoke() {
+            return this.invoke();
+         }
+
+         public final int invoke() {
+            IntRef var10000 = counter;
+            ++counter.element;
+            return var10000.element;
+         }
+      });
+      int var2 = ((Number)inc.invoke()).intValue();
+      System.out.println(var2);
+   }
+
+ */
 
 fun main(args: Array<String>) {
     printGoods("china", listOf("telephone", "tv"))
