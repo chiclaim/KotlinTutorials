@@ -1,4 +1,4 @@
-package lambda
+package lambda.base
 
 /**
  * desc: 修改Lambda外部的变量 演示
