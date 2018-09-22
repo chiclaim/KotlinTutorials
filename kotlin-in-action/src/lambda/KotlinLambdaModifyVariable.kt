@@ -8,7 +8,7 @@ package lambda
 
 //----forEach底层是通过iterator来遍历的，并不是通过内部类来实现的，所以可以修改lambda外面的变量
 fun printGoods(prefix: String, goods: List<String>) {
-    var count: Int = 0
+    var count = 0
     goods.forEach { goodName ->
         count++
         println("$prefix  $goodName")
