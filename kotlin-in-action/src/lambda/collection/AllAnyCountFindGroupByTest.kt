@@ -3,7 +3,7 @@ package lambda.collection
 import lambda.base.Person
 
 /**
- * desc: all、any、count、find、firstOrNull使用演示
+ * desc: all、any、count、find、firstOrNull、groupBy使用演示
  *
  * Created by Chiclaim on 2018/09/22
  */
@@ -39,5 +39,10 @@ fun main(args: Array<String>) {
         println(this)
     }
 
+
+    //按年龄分组
+    list.groupBy(Person::age).apply {
+        println(this)
+    }
 
 }
