@@ -10,36 +10,38 @@ package lambda.base
 
 // N  -> FunctionN
 
-val sum = { y1: Int, y2: Int, y3: Int, y4: Int, y5: Int, y6: Int, y7: Int, y8: Int, y9: Int, y10: Int,
-            y11: Int, y12: Int, y13: Int, y14: Int, y15: Int, y16: Int, y17: Int, y18: Int, y19: Int, y20: Int, y21: Int, y22: Int ->
-    y1 + y2 + y3 + y4 + y5 + y6 + y7 + y8 + y9 + y10 + y11 + y12 + y13 + y14 + y15 + y16 + y17 + y18 + y19 + y20 + y21 + y22
+val sum = { x: Int, y: Int, z: Int ->
+    x + y + z
 }
 
 fun main(args: Array<String>) {
-    println(sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
-            12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22))
+    println(sum(12, 10, 15))
 }
 
 /*
+//除了要看编译后对应的Java代码，还需要分析其编译后生成的class字节码文件
+//如下面的这句代码： sum = (Function3)null.INSTANCE; 就问题了，所以Kotlin插件反编译出来的Java代码不是很完全
+
 public final class LambdaToVariableTestKt {
    @NotNull
-   private static final Function22 sum;
+   private static final Function3 sum;
 
    @NotNull
-   public static final Function22 getSum() {
+   public static final Function3 getSum() {
       return sum;
    }
 
    public static final void main(@NotNull String[] args) {
       Intrinsics.checkParameterIsNotNull(args, "args");
-      int var1 = ((Number)sum.invoke(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22)).intValue();
+      int var1 = ((Number)sum.invoke(12, 10, 15)).intValue();
       System.out.println(var1);
    }
 
    static {
-      sum = (Function22)null.INSTANCE;
+      sum = (Function3)null.INSTANCE;
    }
 }
+
 
 
  */
