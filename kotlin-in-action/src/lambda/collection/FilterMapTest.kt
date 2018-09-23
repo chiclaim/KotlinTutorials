@@ -1,6 +1,7 @@
 package lambda.collection
 
 import lambda.base.Person
+import lambda.base.list
 
 /**
  * desc: filter、map函数 使用演示和原理分析
@@ -8,9 +9,6 @@ import lambda.base.Person
  * Created by Chiclaim on 2018/09/22
  */
 
-val list = listOf<Person>(Person("chiclaim", 18), Person("yuzhiqiang", 15),
-        Person("johnny", 27), Person("clause", 190),
-        Person("fin", 190))
 
 //filter函数的底层也是通过新建一个集合，然后遍历数据源，把符合条件的元素放进新的集合中
 fun filterTest() {
