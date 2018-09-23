@@ -7,8 +7,6 @@ package lambda.base
  * Created by Chiclaim on 2018/09/22
  */
 
-data class Person(var name: String, var age: Int)
-
 class MemberReference {
 
     fun variableReference() {
