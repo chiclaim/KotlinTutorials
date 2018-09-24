@@ -50,13 +50,18 @@ fun collectionTest() {
 }
 
 fun lazyCollectionTest() {
-    list.asSequence().map(Person::age).filter { age ->
+    list.asSequence().map { person ->
+        println("map ${person.age}")
+        person.age
+    }.filter { age ->
+        println("filter $age")
         age > 18
-    }.toList()
+    }//.toList()
     //或者下面的遍历
-    /*.forEach {
-        println(it)
-    }*/
+    .forEach {
+        println("---------forEach $it")
+    }
+
 }
 
 /*
