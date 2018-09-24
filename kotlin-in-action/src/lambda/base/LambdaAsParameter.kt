@@ -1,5 +1,7 @@
 package lambda.base
 
+import java.util.concurrent.Callable
+
 /**
  * desc: lambda作为方法参数演示和原理分析
  *
@@ -16,6 +18,17 @@ inline fun postDelay1(delay: Long, runnable: () -> Unit) {
 
 fun postDelay2(delay: Long, runnable: () -> Unit) {
     runnable()
+}
+
+//lambda作为参数，不能重载postDelay2
+//fun postDelay2(delay: Long, callable: () -> Unit) {
+//    callable()
+//}
+
+//Applying an explicit SAM constructor
+//可以使用SAM constructor来避免Lambda作为参数无法重载的影响
+fun postDelay0(delay: Long, callable: _Runnable) {
+    callable.run()
 }
 
 
@@ -48,4 +61,8 @@ fun main(args: Array<String>) {
     }
 
     //------------可以集合class字节码来分析
+}
+
+interface _Runnable {
+    fun run()
 }
