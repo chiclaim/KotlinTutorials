@@ -52,7 +52,9 @@ fun collectionTest() {
 fun lazyCollectionTest() {
     list.asSequence().map(Person::age).filter { age ->
         age > 18
-    }/*.forEach {
+    }.toList()
+    //或者下面的遍历
+    /*.forEach {
         println(it)
     }*/
 }
@@ -61,7 +63,7 @@ fun lazyCollectionTest() {
 经过分析class字节码、对应的Java代码以及debug跟踪调试，lazy collection 有如下优点：
 
 1，不会创建临时集合
-2，用到集合元素的时候，如遍历，才会触发集合的过滤、转化等操作。（某种意义上讲和RxJava有点类似）
+2，用到集合元素的时候，如遍历或转化成新集合(forEach,toList)，才会触发集合的过滤、转化等操作。（某种意义上讲和RxJava有点类似）
 
 
  */
