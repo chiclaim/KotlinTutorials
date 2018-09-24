@@ -31,6 +31,12 @@ fun postDelay0(delay: Long, callable: _Runnable) {
     callable.run()
 }
 
+//函数返回类型是functional interface
+fun createAllDoneRunnable(): Runnable {
+    //把lambda显示转换成函数接口（functional interface）
+    return Runnable { println("All done!") }
+}
+
 
 fun main(args: Array<String>) {
 
