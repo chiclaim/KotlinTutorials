@@ -11,7 +11,11 @@ import lambda.base.list
 
 
 fun main(args: Array<String>) {
-    lazyCollectionTest()
+//    lazyCollectionTest()
+//    println("============================")
+//    lazyCollectionTest2()
+
+    lazyCollectionTest3()
 }
 
 fun collectionTest() {
@@ -55,13 +59,38 @@ fun lazyCollectionTest() {
         person.age
     }.filter { age ->
         println("filter $age")
-        age > 18
+        age > 20
     }//.toList()
-    //或者下面的遍历
-    .forEach {
+            //或者下面的遍历
+            .forEach {
+                println("---------forEach $it")
+            }
+
+}
+
+fun lazyCollectionTest2() {
+    //把filter函数放置前面，可以有效减少map函数的调用次数
+    list.asSequence().filter { person ->
+        println("filter ${person.age}")
+        person.age > 20
+    }.map { person ->
+        println("map ${person.age}")
+        person.age
+    }.forEach {
         println("---------forEach $it")
     }
 
+}
+
+//create sequence
+fun lazyCollectionTest3() {
+    generateSequence(0) {
+        it + 1
+    }.takeWhile {
+        it <= 100
+    }.sum().apply {
+        println(this)
+    }
 }
 
 /*
