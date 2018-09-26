@@ -1,4 +1,4 @@
-package base
+package data_type
 
 /**
  * Desc: 数据类型测试
