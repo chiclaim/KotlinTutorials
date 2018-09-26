@@ -9,6 +9,7 @@ import java.util.List;
  */
 public class UserPresenter {
 
+    //The interface define with kotlin
     private final UserView friendView;
 
     public UserPresenter(UserView friendView) {
@@ -23,6 +24,7 @@ public class UserPresenter {
     public void getLocalFriendList() {
         List<User> friends = getFriendList();
         //因为 showFriendList方法参数定义为非空，但是friends变量可能为空
+        //Java的编写的变量，对于Kotlin来说既可以用于nullable和non-nullable，所以可以传给Kotlin定义的参数不能为空的方法
         friendView.showFriendList(friends);
     }
 

@@ -36,4 +36,29 @@ fun main(args: Array<String>) {
     }
 }
 
+/*
+
+
+Kotlin会在用到的非空参数前做非空校验（底层自动为我们加上非空校验代码）：
+Intrinsics.checkParameterIsNotNull(list, "list");
+
+public void showFriendList(@NotNull List list) {
+  Intrinsics.checkParameterIsNotNull(list, "list");
+  Iterable $receiver$iv = (Iterable)list;
+  int index$iv = 0;
+  Iterator var4 = $receiver$iv.iterator();
+
+  while(var4.hasNext()) {
+     Object item$iv = var4.next();
+     int var10000 = index$iv++;
+     User user = (User)item$iv;
+     int index = var10000;
+     String var8 = index + 1 + ", " + user;
+     System.out.println(var8);
+  }
+
+}
+
+
+ */
 
