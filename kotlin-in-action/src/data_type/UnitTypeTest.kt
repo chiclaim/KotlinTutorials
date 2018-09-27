@@ -47,6 +47,11 @@ class StringProcessor : Processor<String> {
 
 }
 
+fun main(args: Array<String>) {
+    //对于Kotlin来说任何方法都有返回值的，如果没有指定返回值，那么这个方法的返回值类型就是Unit
+    println(foo2().javaClass)
+}
+
 
 
 
