@@ -44,6 +44,10 @@ fun safeAge(age: Int?): Int = age ?: 0
 //=================================================================
 
 
+//不要写这样的代码，因为getName()方法返回值是Any，可能返回Int也可能返回String
+fun getName(name: String?) = name ?: 1
+
+
 //===============非空断言 !! ========================================
 //非空断言意思就是说 开发者保证这个变量一定不会为空，如果运行时变量为空，则抛出空指针异常
 fun ignoreNulls(str: String?) {
@@ -76,5 +80,11 @@ fun main(args: Array<String>) {
 
     println("age---" + safeAge(null))
     println("age---" + safeAge(99))
+
+
+    //getName()返回Integer
+    println(getName(null).javaClass)
+    //getName()返回String
+    println(getName("chiclaim").javaClass)
 }
 
