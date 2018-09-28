@@ -1,5 +1,7 @@
 package collection
 
+import base.ListJava
+
 /**
  * Desc: Kotlin中创建集合演示
  * Created by Chiclaim on 2018/9/28.
@@ -77,13 +79,22 @@ fun modifyCollection() {
 
 }
 
+//Kotlin中只读集合被Java代码修改的问题
+fun processWithJava() {
+    //自定义一个只读集合
+    val list = listOf(1, 2, 3, 4, 5, 6)
+    //把集合传递给Java方法，只读集合可能就被修改了
+    ListJava.updateList(list)
+    println(list)
+}
+
 
 fun main(args: Array<String>) {
     readOnlyCollection()
-
     println()
-
     modifyCollection()
+    println()
+    processWithJava()
 }
 
 
