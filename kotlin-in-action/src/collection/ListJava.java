@@ -1,5 +1,6 @@
 package collection;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,4 +19,12 @@ public class ListJava {
             list.set(i, list.get(i) + 100);
         }
     }
+}
+
+interface FileContentProcessor {
+    void processContents(File path, byte[] binaryContent, List<String> textContents);
+}
+
+interface DataParser<T> {
+    void parseData(String input, List<T> output, List<String> errors);
 }
