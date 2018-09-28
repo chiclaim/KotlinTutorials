@@ -1,7 +1,7 @@
-package lambda.collection
+package collection
 
-import lambda.base.Person
-import lambda.base.list
+import lambda.Person
+import lambda.list
 
 /**
  * desc: lazy collection和非 lazy collection 对比演示

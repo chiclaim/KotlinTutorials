@@ -1,6 +1,6 @@
-package lambda.collection
+package collection
 
-import lambda.base.Person
+import lambda.Person
 
 /**
  * desc: flatMap、flatten函数使用演示

@@ -1,7 +1,7 @@
-package lambda.collection
+package collection
 
-import lambda.base.Person
-import lambda.base.list
+import lambda.Person
+import lambda.list
 
 /**
  * desc: all、any、count、find、firstOrNull、groupBy使用演示

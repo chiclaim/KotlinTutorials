@@ -1,4 +1,4 @@
-package lambda.base
+package lambda
 
 /**
  * Desc: with、apply函数 Lambda receiver 演示

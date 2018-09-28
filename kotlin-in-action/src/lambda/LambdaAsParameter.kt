@@ -1,4 +1,4 @@
-package lambda.base
+package lambda
 
 /**
  * desc: lambda作为方法参数演示和原理分析

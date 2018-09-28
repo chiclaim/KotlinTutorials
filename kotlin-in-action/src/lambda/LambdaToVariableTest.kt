@@ -1,4 +1,4 @@
-package lambda.base
+package lambda
 
 /**
  * desc: 把Lambda赋值给一个变量
