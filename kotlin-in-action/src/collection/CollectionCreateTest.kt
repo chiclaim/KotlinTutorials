@@ -1,7 +1,5 @@
 package collection
 
-import base.ListJava
-
 /**
  * Desc: Kotlin中创建集合演示
  * Created by Chiclaim on 2018/9/28.

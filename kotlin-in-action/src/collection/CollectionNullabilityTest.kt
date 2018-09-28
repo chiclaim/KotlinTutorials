@@ -1,7 +1,5 @@
 package collection
 
-import base.ListJava
-
 /**
  * Desc: Kotlin集合 为空性演示
  * Created by Chiclaim on 2018/9/18.
