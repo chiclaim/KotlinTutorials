@@ -10,9 +10,9 @@ package operator_overloading
 // minus -> -
 // times -> *
 // div   -> /
-// mod   -> %
+// rem   -> %
 
-data class Point(val x: Int, val y: Int) {
+data class Point(var x: Int, var y: Int) {
 
     operator fun plus(other: Point): Point {
         return Point(x + other.x, y + other.y)
@@ -24,6 +24,10 @@ data class Point(val x: Int, val y: Int) {
 
     operator fun div(other: Point): Point {
         return Point(x / other.x, y / other.y)
+    }
+
+    operator fun rem(other: Point): Point {
+        return Point(x % other.x, y % other.y)
     }
 }
 
