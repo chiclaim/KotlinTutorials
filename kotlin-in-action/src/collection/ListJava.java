@@ -3,7 +3,6 @@ package collection;
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
-
 /**
  * Desc:
  * Created by Chiclaim on 2018/9/18.
@@ -19,12 +18,17 @@ public class ListJava {
             list.set(i, list.get(i) + 100);
         }
     }
+
+    public interface DataParser<T> {
+        void parseData(String input, List<T> output, List<String> errors);
+    }
+
+
+    interface FileContentProcessor {
+        void processContents(File path, byte[] binaryContent, List<String> textContents);
+    }
 }
 
-interface FileContentProcessor {
-    void processContents(File path, byte[] binaryContent, List<String> textContents);
-}
 
-interface DataParser<T> {
-    void parseData(String input, List<T> output, List<String> errors);
-}
+
+

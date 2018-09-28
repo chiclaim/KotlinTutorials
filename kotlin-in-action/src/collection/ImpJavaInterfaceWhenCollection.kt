@@ -14,16 +14,17 @@ import java.io.File
 
 //下面是Kotlin实现Java接口关于Nullability上的处理 的例子（from kotlin in action）
 
-class FileIndexer : FileContentProcessor {
+class FileIndexer : ListJava.FileContentProcessor {
     override fun processContents(path: File,
                                  binaryContents: ByteArray?,
                                  textContents: List<String>?) {
         // ...
+        println()
     }
 }
 
 
-class PersonParser : DataParser<Person> {
+class PersonParser : ListJava.DataParser<Person> {
     override fun parseData(input: String,
                            output: MutableList<Person>,
                            errors: MutableList<String?>) {
