@@ -1,11 +1,12 @@
 package operator_overloading
 
 /**
- * Desc: 区间操作符
+ * Desc: in操作符
  * Created by Chiclaim on 2018/9/29.
  */
 
-// a in c -> c.contains(a)
+// a in c                       -> c.contains(a)
+// c in List/Array/CharSequence -> iterator()
 
 data class Rectangle(val upperLeft: Point, val lowerRight: Point)
 
@@ -24,4 +25,15 @@ fun main(args: Array<String>) {
     val rect = Rectangle(Point(10, 10), Point(60, 60))
     println(Point(20, 20) in rect)
     println(Point(5, 20) in rect)
+
+
+    //operator fun CharSequence.iterator()
+    for(c in "chiclaim"){
+        println(c)
+    }
+
+    val list = listOf(1,2,3)
+    for (i in list){
+
+    }
 }
