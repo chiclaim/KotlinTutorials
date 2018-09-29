@@ -12,24 +12,7 @@ package operator_overloading
 // div   -> /
 // rem   -> %
 
-data class Point(var x: Int, var y: Int) {
 
-    operator fun plus(other: Point): Point {
-        return Point(x + other.x, y + other.y)
-    }
-
-    operator fun times(other: Point): Point {
-        return Point(x * other.x, y * other.y)
-    }
-
-    operator fun div(other: Point): Point {
-        return Point(x / other.x, y / other.y)
-    }
-
-    operator fun rem(other: Point): Point {
-        return Point(x % other.x, y % other.y)
-    }
-}
 
 //通过函数扩展进行操作符重载
 operator fun Point.minus(other: Point): Point {
