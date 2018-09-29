@@ -1,7 +1,7 @@
 package operator_overloading
 
 /**
- * Desc:
+ * Desc: 区间操作符
  * Created by Chiclaim on 2018/9/29.
  */
 
