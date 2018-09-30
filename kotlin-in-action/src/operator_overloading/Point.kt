@@ -1,7 +1,6 @@
 package operator_overloading
 
-data class Point(var x: Int, var y: Int) {
-
+class Point(var x: Int, var y: Int) {
 
     operator fun plus(other: Point): Point {
         return Point(x + other.x, y + other.y)
@@ -18,6 +17,5 @@ data class Point(var x: Int, var y: Int) {
     operator fun rem(other: Point): Point {
         return Point(x % other.x, y % other.y)
     }
-
 
 }
