@@ -1,5 +1,8 @@
 package operator_overloading
 
+/**
+ * 操作符重载需要的类
+ */
 class Point(var x: Int, var y: Int) {
 
     operator fun plus(other: Point): Point {
