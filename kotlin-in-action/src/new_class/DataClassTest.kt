@@ -11,7 +11,7 @@ data class Human(var id: String) {
 
 /*
 
-会根据id生成 hashCode、equals、toString 方法
+会根据构造方法参数：id生成 hashCode、equals、toString、copy、componentN方法
 
 此处省略对应的Java代码
 
