@@ -65,7 +65,38 @@ var canReturnNull: (Int, Int) -> Int? = { _, _ ->
     null
 }
 var funOrNull: ((Int, Int) -> Int)? = null
+
+fun <T> Collection<T>.joinToString(separator: String = ", ",
+                                   prefix: String = "", postfix: String = "",
+                                   transform: ((T) -> String)? = null
+): String {
+    val result = StringBuilder(prefix)
+    for ((index, element) in this.withIndex()) {
+        if (index > 0)
+            result.append(separator)
+        val str = transform?.invoke(element)
+                ?: element.toString()
+        result.append(str)
+    }
+    result.append(postfix)
+    return result.toString()
+}
 //============ ending====================================
+
+
+//============ 函数的返回值 starting===================
+enum class Delivery { STANDARD, EXPEDITED }
+
+class Order(val itemCount: Int)
+
+fun getShippingCostCalculator(delivery: Delivery): (Order) -> Double {
+    if (delivery == Delivery.EXPEDITED) {
+        return { order -> 6 + 2.1 * order.itemCount }
+    }
+    return { order -> 1.2 * order.itemCount }
+}
+
+//============ ending ================================
 
 fun main(args: Array<String>) {
     val a = 11
@@ -86,6 +117,9 @@ fun main(args: Array<String>) {
 
     println(sum.javaClass)
     println(sum2.javaClass)
+
+    val calculator = getShippingCostCalculator(Delivery.EXPEDITED)
+    println("Shipping costs ${calculator(Order(3))}")
 
 }
 
