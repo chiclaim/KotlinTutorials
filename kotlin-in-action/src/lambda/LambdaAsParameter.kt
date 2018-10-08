@@ -1,7 +1,5 @@
 package lambda
 
-import java.util.concurrent.Callable
-
 /**
  * desc: lambda作为方法参数演示和原理分析
  *
@@ -66,9 +64,8 @@ fun main(args: Array<String>) {
         println("postDelay2 $flag")
     }
 
-    //------------可以集合class字节码来分析
+    //------------可以ji结合class字节码来分析
 }
 
-interface _Runnable {
-    fun run()
+interface _Runnable {   fun run()
 }
