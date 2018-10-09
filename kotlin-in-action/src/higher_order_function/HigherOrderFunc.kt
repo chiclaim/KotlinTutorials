@@ -39,7 +39,7 @@ fun String.filter(predicate: (Char) -> Boolean): String {
 //====================ending=================================
 
 
-//============ 高阶函数和Lambda starting===================
+//============ 高阶函数和Lambda starting==================================
 fun Any.hashC(predicate: (Int) -> Boolean): Int {
     return if (predicate(this.hashCode())) hashCode() else 0
 }
@@ -51,13 +51,64 @@ fun testHashC() {
     //下面lambda的it代表的是什么值？
     //it代表的是在hashC函数里调用predicate函数的参数(this.hashCode())值
     //所以当我们处理集合的时候使用的filter、foreach等高阶函数，lambda中的it含义都是由该高阶函数内部决定的
-    val resultCode = o.hashC { it ->
+    val resultCode = o.hashC {
         println("it = $it")
         it % 2 == 0
     }
     println("resultCode = $resultCode")
 }
-//====================ending==============================
+
+//如果function type没有任何参数呢？那么在使用的时候，在使用的时候就没有it参数
+fun Any.hashC2(predicate: () -> Boolean): Int {
+    //predicate没有任何参数
+    return if (predicate()) hashCode() else 0
+}
+
+fun testHashC2() {
+    val o = Object()
+    val resultCode = o.hashC2 {
+        //----没有it参数----
+        //println("it = $it")
+        true
+    }
+    println("resultCode = $resultCode")
+}
+
+//下面在介绍一种类似apply高阶函数，function type也没有参数，但是把lambda当做参数传递的时候，依然会返回一个receiver的参数
+//function type格式如下：T.() -> 返回值
+//在使用lambda的时候，receiver参数就是这个T类型
+fun Any.hashC3(predicate: Any.() -> Boolean): Int {
+    //predicate没有任何参数
+    return if (predicate()) hashCode() else 0
+}
+
+fun testHashC3() {
+    val o = Object()
+    //下面的this就是 ‘Any.()‘ 中的Any
+    val resultCode = o.hashC3 {
+        //----没有it参数，但是有this参数----
+        println("this = $this")
+        true
+    }
+    println("resultCode = $resultCode")
+}
+
+//下面也可以让传递lambda的时候it是其本身，但是和上面还是有区别的：
+//一个是it:Any
+//一个是this:Any 我们称之为 lambda receiver
+fun Any.hashC4(predicate: (Any) -> Boolean): Int {
+    return if (predicate(this)) hashCode() else 0
+}
+fun testHashC4() {
+    val o = Object()
+    val resultCode = o.hashC4 {
+        //----没有it参数，但是有this参数----
+        println("this = $it")
+        true
+    }
+    println("resultCode = $resultCode")
+}
+//====================ending=============================================
 
 
 //============ 高阶函数null问题 starting===================
