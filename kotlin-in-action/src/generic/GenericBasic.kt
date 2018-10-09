@@ -45,8 +45,6 @@ fun isList2(obj: Any): Boolean {
 //ending===========泛型擦除 type erasure ================================
 
 
-
-
 //starting===========reified type ================================
 
 //我们知道泛型在运行时会擦除，但是在inline函数中我们可以指定泛型不被擦除，因为inline函数在编译期会copy到调用它的方法里
@@ -58,8 +56,8 @@ fun isList2(obj: Any): Boolean {
 
 inline fun <reified T> isType(value: Any) = value is T
 
-//这个是很有用的特性，因为我们在封装的时候，为了尽可能的复用代码，通常把泛型封装到最底层，但是因为运行时擦除的问题，收到一些限制
-//比如下面的的逻辑：请求网络，成功后把返回的json解析成对应的bean，所有的网络请求都有这样的逻辑，所以把json解析成bean的逻辑通过泛型抽取出来
+//这个是很有用的特性，因为我们在封装的时候，为了尽可能的复用代码，通常把泛型封装到最底层，但是受到泛型运行时擦除的限制
+//比如下面的的逻辑：请求网络，成功后把返回的json解析成对应的bean，所有的网络请求都有这样的逻辑，所以把网络请求和json解析成bean的逻辑通过泛型抽取出来
 //但是不同的逻辑对应不同的bean，由于泛型参数在运行时被擦除所以拿不到上层传下的bean类型，从而json解析成bean的时候失败
 //通过inline和reified就可以很好的解决这个问题，达到代码重用最大化
 
@@ -104,6 +102,19 @@ inline fun <reified T> requestRemoteSource(paramMap: Map<String, Any?>, method: 
 
  */
 
+//--------reified type很好用，它有以下限制：
+//1, 只能用于类型检查和转换 ( is , !is , as , as? )
+//2, 用于Kotlin反射
+//3, 获取泛型对应的class(java.lang.Class(::class.java))
+//4, 调用其他函数时作为类型参数
+
+//--------reified type很好用，不能用于：
+//1, Create new instances of the class specified as a type parameter
+//2, Call methods on the companion object of the type parameter class
+//3, Use a non-reified type parameter as a type argument when calling a function with a reified type parameter
+//4, Mark type parameters of classes, properties, or non-inline functions as reified
+
+//todo 为什么在Companion中定义的inline reified的在Java中调用不到，class字节码显示该方法是private的？？
 
 //ending===========================================
 
