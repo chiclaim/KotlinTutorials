@@ -94,7 +94,7 @@ fun testHashC3() {
 }
 
 //下面也可以让传递lambda的时候it是其本身，但是和上面还是有区别的：
-//一个是it:Any
+//一个是it:Any 我们称之为 lambda parameter
 //一个是this:Any 我们称之为 lambda receiver
 fun Any.hashC4(predicate: (Any) -> Boolean): Int {
     return if (predicate(this)) hashCode() else 0
