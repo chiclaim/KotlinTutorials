@@ -114,7 +114,9 @@ inline fun <reified T> requestRemoteSource(paramMap: Map<String, Any?>, method: 
 //3, Use a non-reified type parameter as a type argument when calling a function with a reified type parameter
 //4, Mark type parameters of classes, properties, or non-inline functions as reified
 
-//todo 为什么在Companion中定义的inline reified的在Java中调用不到，class字节码显示该方法是private的？？
+
+//--------需要注意的是，inline reified type的函数不能被Java方法调用，只能被Kotlin函数调用
+//反编译后的class可以知道， inline reified type的函数是private的
 
 //ending===========================================
 
