@@ -29,13 +29,19 @@ public class Plate<T> {
 
 }
 
+//食物
+class Food {
+
+}
+
 //水果类
-class Fruit {
+class Fruit extends Food {
 }
 
 //苹果
 class Apple extends Fruit {
 }
+
 //梨子
 class Pear extends Fruit {
 }

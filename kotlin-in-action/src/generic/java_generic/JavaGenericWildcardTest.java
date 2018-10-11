@@ -4,11 +4,11 @@ package generic.java_generic;
  * Desc: 关于Java 泛型中的通配符：上界通配符、下界通配符
  * <p></p>
  *
- * <b>上界通配符(协变)</b>
+ * <b>上界通配符</b>
  * <p></p>
  * <img src='res/generic_extends.png' width='400'/>
  * <p></p>
- * <b>下界通配符(逆变)</b>
+ * <b>下界通配符</b>
  * <p></p>
  * <img src='res/generic_super.png' width='400'/>
  * <p></p>
@@ -17,17 +17,30 @@ package generic.java_generic;
 public class JavaGenericWildcardTest {
 
     //关于泛型通配符的两个问题：
-    //1，什么样规则的泛型可以赋值给一个泛型通配符？[上界、下界]
-    //2，赋值完成后，我们能对这个泛型通配符变量做什么？[协变、逆变]
-
-
-    public static void main(String[] args) {
-
-
-    }
+    //1，泛型通配符的变量可能包含哪些类型？[上界、下界]，
+    //2，我们能对这个泛型通配符变量做什么？[协变、逆变]
 
     //测试泛型通配符
     private static void testGenericWildcards() {
+
+        Plate<Food> foodPlate = new Plate<>(new Food());
+        Plate<Fruit> fruitPlate = new Plate<>(new Fruit());
+        Plate<Apple> applePlate = new Plate<>(new Apple());
+        Plate<Pear> pearPlate = new Plate<>(new Pear());
+        //take2方法参数是上界通配符：意思就是最高到Fruit这个类(Fruit类及其子类)
+        //takeExtendsFruit(foodPlate); 编译报错
+        takeExtendsFruit(fruitPlate);
+        takeExtendsFruit(applePlate);
+        takeExtendsFruit(pearPlate);
+
+        //----------------------------------
+
+        //take3方法参数是下界通配符：意思就是最低是Apple这个类(Apple及其以上的类)
+        takeSuperApple(foodPlate);
+        takeSuperApple(fruitPlate);
+        takeSuperApple(applePlate);
+        //takeSuperApple(applePlate); 编译报错
+        //takeSuperApple(pearPlate);  编译报错
 
     }
 
@@ -56,10 +69,10 @@ public class JavaGenericWildcardTest {
 
         //2，泛型协变covariant(? extends T)，也叫[上界通配符]
         // 为了能把苹果盘子传递给take方法，需要用到泛型协变
-        take2(plate3);
+        takeExtendsFruit(plate3);
         //使用了泛型协变，所有的水果盘子都能传递给take2方法，下面看下装梨的盘子传递给take2方法
         Plate<Pear> plate4 = new Plate<>(new Pear());
-        take2(plate4);
+        takeExtendsFruit(plate4);
 
 
         //3，泛型逆变 contravariant 也叫做下界通配符（Lower Bounds Wildcards）
@@ -102,7 +115,13 @@ public class JavaGenericWildcardTest {
     }
 
     //泛型协变
-    private static void take2(Plate<? extends Fruit> plate) {
+    private static void takeExtendsFruit(Plate<? extends Fruit> plate) {
+        //plate里可能装着Fruit或者它的子类(Fruit、Apple、Pear)
+    }
+
+    //泛型逆变
+    private static void takeSuperApple(Plate<? super Apple> plate) {
+        //plate里装着只有可能是Apple及其父类(Fruit、Food)
     }
 
 }
