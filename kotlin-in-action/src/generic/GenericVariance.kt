@@ -37,10 +37,9 @@ fun main(args: Array<String>) {
     //public interface MutableList<E> : List<E>
 
 
+}
 
-
-
-
+fun main(value:Int){
 
 }
 
