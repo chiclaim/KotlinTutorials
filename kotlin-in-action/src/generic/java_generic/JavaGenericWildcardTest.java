@@ -1,7 +1,10 @@
 package generic.java_generic;
 
 /**
- * Desc: 关于Java 泛型中的通配符：上界通配符、下界通配符
+ * Desc: 关于Java 泛型中的通配符：上界通配符(extends、协变)、下界通配符(super、逆变)
+ * <p></p>
+ * PECS(Producer Extends, Consumer Super)
+ *
  * <p></p>
  *
  * <b>上界通配符</b>
@@ -44,7 +47,7 @@ public class JavaGenericWildcardTest {
 
     }
 
-    //测试泛型协变
+    //测试泛型协变covariant/逆变contravariant
     private static void testGenericCovariation() {
 
         //1，定义一个能装水果的盘子，按道理应该也可以装苹果，但是编译器会提示错误：
@@ -110,6 +113,13 @@ public class JavaGenericWildcardTest {
         //当集合不需要获取元素，只需要修改集合，用super，防止集合元素被修改
 
     }
+
+
+
+    //如果一个泛型参数没有加上extends或super，那么他就是invariant：List<T> dest
+
+
+
 
     private static void take(Plate<Fruit> plate) {
     }
