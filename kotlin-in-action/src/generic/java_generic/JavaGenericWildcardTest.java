@@ -1,5 +1,7 @@
 package generic.java_generic;
 
+import generic.java_generic.bean.*;
+
 /**
  * Desc: 关于Java 泛型中的通配符：上界通配符(extends、协变)、下界通配符(super、逆变)
  * <p></p>
@@ -52,8 +54,8 @@ public class JavaGenericWildcardTest {
 
         //1，定义一个能装水果的盘子，按道理应该也可以装苹果，但是编译器会提示错误：
         //      Incompatible types.
-        //      Required:Plate<generic.java_generic.Fruit>
-        //      Found:Plate<generic.java_generic.Apple>
+        //      Required:Plate<generic.java_generic.bean.Fruit>
+        //      Found:Plate<generic.java_generic.bean.Apple>
         //Plate<Fruit> plate = new Plate<Apple>(new Apple());
 
         //可能有有人奇怪，我们可以使用下面的方式防止报错(new Plate<>)：
