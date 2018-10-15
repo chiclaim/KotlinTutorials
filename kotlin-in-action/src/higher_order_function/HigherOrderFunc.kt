@@ -166,8 +166,8 @@ fun main(args: Array<String>) {
     }
     println(reuslt)
 
-    println(sum.javaClass)
-    println(sum2.javaClass)
+    println(sum.javaClass.kotlin.simpleName)
+    println(sum2.javaClass.kotlin.simpleName)
 
     val calculator = getShippingCostCalculator(Delivery.EXPEDITED)
     println("Shipping costs ${calculator(Order(3))}")
