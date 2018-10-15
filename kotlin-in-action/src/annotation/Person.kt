@@ -6,7 +6,6 @@ package annotation
  */
 class Person {
 
-
     @JsonName
     var firstName: String? = null
 
@@ -18,4 +17,14 @@ class Person {
 
     @JsonName3("sex", "male")
     var gender: String? = null
+
+    @PropertyOnly
+    private var adress: String? = null
+
+    @MethodOnly
+    fun run() {
+        println("run...")
+    }
+
+
 }
