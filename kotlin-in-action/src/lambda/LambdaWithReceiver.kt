@@ -1,7 +1,7 @@
 package lambda
 
 /**
- * Desc: with、apply函数 Lambda receiver 演示
+ * Desc: with、apply、run函数 Lambda receiver 演示
  * Created by Chiclaim on 2018/9/25.
  */
 
@@ -17,7 +17,6 @@ fun alphabet() = with(StringBuilder()) {
 }
 
 
-
 //apply函数是一个扩展函数
 //此时lambda receiver是调用apply函数的对象
 //使用apply函数可以创建对象后很方便地进行初始化操作
@@ -28,8 +27,16 @@ fun alphabet2() = StringBuilder().apply {
     append("\nNow I know the alphabet!")
 }
 
+fun alphabet3() = StringBuilder().run {
+    for (c in 'A'..'Z') {
+        append(c)
+    }
+    append("\nNow I know the alphabet!")
+}
+
 
 fun main(args: Array<String>) {
     println(alphabet())
     println(alphabet2())
+    println(alphabet3())
 }
