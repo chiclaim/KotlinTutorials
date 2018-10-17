@@ -11,6 +11,8 @@ fun runTest() = run {
     "this is run return"
 }
 
+
+//lambda参数是this的，this就是lambda receiver
 //lambda receiver
 //inline fun <T, R> T.run(block: T.() -> R): R
 fun runTest2() = StringBuilder().run {
