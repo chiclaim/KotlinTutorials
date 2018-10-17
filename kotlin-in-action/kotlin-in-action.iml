@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="false">
+  <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/../out/production/kotlin-in-action" />
     <output-test url="file://$MODULE_DIR$/../out/test/kotlin-in-action" />
     <exclude-output />
@@ -10,5 +10,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="library" name="kotlinx-coroutines-core-0.30.2" level="project" />
   </component>
 </module>
