@@ -7,7 +7,7 @@ package visibility_modifier.modifier_member
 open class MemberModifier {
 
     //default is public
-    val username: String? = "chiclaim"
+    public val username: String? = "chiclaim"
 
     //visible in file
     private var password: String? = "123456"
