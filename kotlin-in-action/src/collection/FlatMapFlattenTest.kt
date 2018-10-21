@@ -21,12 +21,12 @@ fun main(args: Array<String>) {
 
     //flatMap vs map
 
+    //map函数把每个person的children集合放到新集合中，最终返回的记过是集合嵌套
+    //flat是扁平的意思，flatMap把每个person的每个child放到集合
     people.flatMap { it.children }.apply {
         println(this) //List<Person>
     }
 
-    //从上面的例子中可以看出 map函数把每个person的children集合放到新集合中，最终返回的记过是集合嵌套
-    //flat是扁平的意思，flatMap把每个person的每个child放到集合
 
     //我们也可以把集合嵌套通过flatten函数将其扁平化
     //如上面的map函数返回的List<List<Person>扁平化成List<Person>
