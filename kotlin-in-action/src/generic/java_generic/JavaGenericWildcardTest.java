@@ -44,7 +44,6 @@ public class JavaGenericWildcardTest {
         takeSuperApple(foodPlate);
         takeSuperApple(fruitPlate);
         takeSuperApple(applePlate);
-        //takeSuperApple(applePlate); 编译报错
         //takeSuperApple(pearPlate);  编译报错
 
     }
