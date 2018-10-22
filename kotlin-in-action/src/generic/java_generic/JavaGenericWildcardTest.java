@@ -40,10 +40,10 @@ public class JavaGenericWildcardTest {
 
         //----------------------------------
 
-        //take3方法参数是下界通配符：意思就是最低是Apple这个类(Apple及其以上的类)
+        //方法参数是下界通配符：意思就是最低是Apple这个类(Apple及其以上的类)
         takeSuperApple(foodPlate);
         takeSuperApple(fruitPlate);
-        takeSuperApple(applePlate);
+        //takeSuperApple(applePlate); 编译报错
         //takeSuperApple(pearPlate);  编译报错
 
     }
@@ -83,7 +83,7 @@ public class JavaGenericWildcardTest {
         Plate<? extends Fruit> plate5 = new Plate<>(new Apple());
         //plate5.set(new Fruit()); 编译报错
         //plate5.set(new Apple()); 编译报错
-        plate5.get();            //编译正常
+        Fruit fruit = plate5.get();            //编译正常
         //可以看出，泛型协变导致Fruit类的set方法失效，get方法正常
         //也就是说泛型T不能传递进来，只能返回出去给别人用，换句话说就是只能作为生产者
         //如果要想泛型能当做参数传递进来，就不能使用泛型协变了，使用泛型逆变
@@ -116,23 +116,24 @@ public class JavaGenericWildcardTest {
     }
 
 
-
     //如果一个泛型参数没有加上extends或super，那么他就是invariant：List<T> dest
-
-
 
 
     private static void takeFruit(Plate<Fruit> plate) {
     }
 
-    //泛型协变
+    //泛型协变. plate里可能装着Fruit或者它的子类(Fruit、Apple、Pear)
     private static void takeExtendsFruit(Plate<? extends Fruit> plate) {
-        //plate里可能装着Fruit或者它的子类(Fruit、Apple、Pear)
+        //plate.set(new Fruit()); 编译报错
+        //plate.set(new Apple()); 编译报错
+        Fruit fruit = plate.get(); //编译正常
     }
 
-    //泛型逆变
-    private static void takeSuperApple(Plate<? super Apple> plate) {
-        //plate里装着只有可能是Apple及其父类(Fruit、Food)
+    //泛型逆变. plate里装着只有可能是Fruit及其父类(Fruit、Food)
+    private static void takeSuperApple(Plate<? super Fruit> plate) {
+        plate.set(new Apple());     //编译正常
+        //Fruit fruit = plate.get(); //编译报错
+        //Fruit pear = plate.get();   //编译报错
     }
 
 }
