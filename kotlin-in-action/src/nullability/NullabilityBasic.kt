@@ -58,14 +58,45 @@ fun ignoreNulls(str: String?) {
 
 //===============let 函数判空========================================
 fun console(message: String?) {
+
     message?.let {
-        println(it)
+        val result = it.substring(1)
+        println(result)
     }
+
+    message?.run {
+        val result = substring(1)
+        println(result)
+    }
+
+    message?.apply {
+        val result = substring(1)
+        println(result)
+    }
+
+    with(StringBuilder()) {
+        for (letter in 'A'..'Z') {
+            append(letter)
+        }
+        append("\nNow I know alphabet!").toString()
+    }
+
+
 
     //相当于
     //if (message != null) {
     //    println(it)
     //}
+
+    message.run {
+        println("run--------")
+        1
+    }
+
+    run {
+        println("run--------")
+        1
+    }
 }
 
 
