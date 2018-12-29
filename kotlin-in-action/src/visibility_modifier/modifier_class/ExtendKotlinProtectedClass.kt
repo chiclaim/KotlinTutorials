@@ -24,6 +24,11 @@ class UseKotlinProtectedClass {
 
 
 class ExtendKotlinProtectedClass2 : ProtectedClassTest() {
+
     private var protectedClass: ProtectedClass? = null
+
+    protected class A : ProtectedClass() {
+
+    }
 }
 
