@@ -26,10 +26,11 @@ open class Person5 {
         this.name = name
     }
 
-    constructor(id: Int) {
+    constructor(id: Int) : this("chiclaim") {
         this.id = id
     }
 
+    //构造对象的时候，init代码块只会被执行一次
     init {
         System.out.println("init----------")
     }
@@ -68,7 +69,7 @@ public class Person5 {
    }
 
    public Person5(int id) {
-      System.out.println("init----------");
+      this("chiclaim");
       this.id = id;
    }
 }
