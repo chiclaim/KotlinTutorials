@@ -16,6 +16,11 @@ class ObjectKeywordTest {
 
         //私有静态变量
         var username: String = "chiclaim"
+
+        //静态方法
+        fun run() {
+            println("run...")
+        }
     }
 
 }
@@ -37,7 +42,15 @@ class ObjectKeywordTest {
        @NotNull
        private static String username = "chiclaim";
 
+       public static final ObjectKeywordTest.Companion Companion = new ObjectKeywordTest.Companion((DefaultConstructorMarker)null);
+
        public static final class Companion {
+
+          public final void run() {
+            String var1 = "run...";
+            System.out.println(var1);
+          }
+
           public final int getGENDER() {
              return ObjectKeywordTest.GENDER;
           }
