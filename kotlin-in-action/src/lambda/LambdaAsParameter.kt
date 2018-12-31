@@ -6,6 +6,10 @@ package lambda
  * Created by Chiclaim on 2018/09/24
  */
 
+fun postDelay(runnable: Runnable) {
+    runnable.run()
+}
+
 fun postDelay0(delay: Long, runnable: Runnable) {
     runnable.run()
 }
@@ -37,6 +41,19 @@ fun createAllDoneRunnable(): Runnable {
 
 
 fun main(args: Array<String>) {
+
+    //不允许将lambda当作参数进行传递
+    //虽然Runnable是Java的Functional interface
+    //但是postDelay方法使用kotlin定义的
+   /*postDelay{
+       println("postDelay")
+   }*/
+
+    //也不允许将lambda当作参数进行传递
+    //因为KotlinInterface是Kotlin定义的
+    /*Button().setCallback{
+
+    }*/
 
 
     //创建一个实现了Runnable接口的内部类。

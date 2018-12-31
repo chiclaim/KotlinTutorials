@@ -14,13 +14,15 @@ interface InterfaceTest {
         count += num
     }
 
-    fun test() {
-        print("")
-    }
 }
 
 class Impl : InterfaceTest {
     override var count: Int = 0
+
+    override fun plus(num: Int) {
+        super.plus(num)
+        println("invoke plus")
+    }
 }
 
 /*
