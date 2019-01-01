@@ -10,12 +10,18 @@ package lambda
 
 // N  -> FunctionN
 
-val sum = { x: Int, y: Int, z: Int ->
-    x + y + z
+class LambdaToVariableTest {
+
+    private val base = 10
+
+    val sum = { x: Int, y: Int, z: Int ->
+        x + y + z + base
+    }
 }
 
 fun main(args: Array<String>) {
-    println(sum(12, 10, 15))
+    val test = LambdaToVariableTest()
+    println(test.sum(12, 10, 15))
 }
 
 /*
