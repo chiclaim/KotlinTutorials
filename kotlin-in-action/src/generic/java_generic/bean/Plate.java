@@ -11,7 +11,7 @@ package generic.java_generic.bean;
  */
 
 //定义一个`盘子`类
-public class Plate<T> {
+public class Plate<T extends Food> {
 
     private T item;
 

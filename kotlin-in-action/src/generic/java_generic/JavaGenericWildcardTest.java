@@ -64,7 +64,10 @@ public class JavaGenericWildcardTest {
         //Plate<Fruit> plate2 = new Plate<Fruit>(new Apple());
 
 
+        //takeFruit(new Plate<Apple>(new Apple())); //泛型之不变
         takeFruit(new Plate<>(new Apple()));//相当于test(new Plate<Fruit>(new Apple()));
+
+        takeExtendsFruit(new Plate<Apple>(new Apple()));//泛型协变
 
         Plate<Apple> plate3 = new Plate<>(new Apple());
         //take方法需要一个装水果的盘子，但是把装苹果的盘子无法作为参数传递进去

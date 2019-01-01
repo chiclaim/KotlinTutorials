@@ -26,7 +26,7 @@ import generic.java_generic.bean.Pear
  */
 
 
-fun testGenericNumber(numbers: List<Fruit>) {
+fun takeFruit(fruits: List<Fruit>) {
 }
 
 
@@ -42,10 +42,10 @@ fun main(args: Array<String>) {
     //out修饰的泛型是 泛型协变 covariant
     //像这样的类或接口如List，称之为协变(covariant)类(接口)
     //和Java一样，协变泛型不能传递父类类型，只能传递Fruit或者它的子类
-    //testGenericNumber(foods) 编译报错
-    testGenericNumber(fruits)
-    testGenericNumber(apples)
-    testGenericNumber(pears)
+    //takeFruit(foods) 编译报错
+    takeFruit(fruits)
+    takeFruit(apples)
+    takeFruit(pears)
 
     //-------------------------------------
 
