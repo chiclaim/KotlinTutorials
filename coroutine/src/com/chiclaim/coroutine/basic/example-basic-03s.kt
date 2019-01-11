@@ -12,7 +12,7 @@ fun main() = runBlocking {
     println("Hello,")
 
     //1, coroutine后面的代码，要先于coroutine代码块里的代码先执行
-    //2, 如果内部的coroutine是基于外部的coroutine的scope创建的，那么执行完外部的coroutine代码，会自动执行内部的coroutine代码
+    //2, 如果内部的coroutine是基于外部的coroutine的scope创建的，那么执行完外部的scope域代码，会自动执行内部的coroutine代码
 
 }
 /*
