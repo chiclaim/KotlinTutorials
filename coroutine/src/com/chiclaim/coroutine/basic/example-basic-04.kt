@@ -4,24 +4,29 @@ import kotlinx.coroutines.*
 
 fun main() = runBlocking {
     launch {
-        //delay(200L)
+        delay(200L)
         println("Task from runBlocking")
     }
 
     // Creates a new coroutine scope
     coroutineScope {
+
+        //基于该scope的coroutine
         launch {
-            //delay(500L)
+            delay(500L)
             println("Task from nested launch1")
         }
 
+        //基于该scope的coroutine
         launch {
-            //delay(500L)
+            delay(500L)
             println("Task from nested launch2")
         }
     
-        //delay(100L)
+        delay(100L)
+        //称之为scope域代码
         println("Task from coroutine scope") // This line will be printed before nested launch
+
     }
     
     println("Coroutine scope is over") // This line is not printed until nested launch completes
