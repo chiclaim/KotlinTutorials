@@ -3,9 +3,12 @@ import kotlinx.coroutines.*
 
 fun main() {
     GlobalScope.launch {
-        println("Before Coroutine delay....") // print after delay
+
+        println("Before Coroutine delay....")
+
         // launch new coroutine in background and continue
         delay(1000L) // non-blocking delay for 1 second (default time unit is ms)
+
         println("World!") // print after delay
     }
 
