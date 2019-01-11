@@ -1,4 +1,4 @@
-## 从Java视角深入理解Kotlin
+## 从Java角度深入理解Kotlin
 
 1. Kotlin数据类型、访问修饰符
    1. Kotlin和Java数据类型对比
