@@ -8,8 +8,8 @@ fun main() {
 fun test1() {
     runBlocking {
         //Global coroutines are like daemon threads
-        //jvm进程关闭后，这个写成也会关闭
-        //
+        //jvm进程关闭后，这个协程也会关闭
+        //关于daemon thread 可以查看 ：DaemonThreadTest.java
         GlobalScope.launch {
             repeat(1000) { i ->
                 println("I'm sleeping $i ...")
