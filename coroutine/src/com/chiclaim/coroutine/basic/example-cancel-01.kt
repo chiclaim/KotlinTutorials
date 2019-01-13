@@ -15,6 +15,8 @@ fun main() = runBlocking {
     println("main: Now I can quit.")
 }
 
+//todo cancel/join，如何演示join的效果？
+
 /*
 
 I'm sleeping 0 ...
