@@ -20,7 +20,7 @@ fun main() = runBlocking {
 
 /*
 
-发现输出了3次，还继续输出了2次，说明cancel
+发现输出了3次，还继续输出了2次，如果coroutine在做耗时操作的时候，cancel并不能立即取消coroutine
 
 I'm sleeping 0 ...
 I'm sleeping 1 ...
