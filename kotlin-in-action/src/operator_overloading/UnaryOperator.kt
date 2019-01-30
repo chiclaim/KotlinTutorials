@@ -35,6 +35,8 @@ operator fun BigDecimal.inc() = this + BigDecimal.ONE
 
 fun main(args: Array<String>) {
     var p1 = Point(10, 30)
+    println(+p1)
+    println(-p1)
     println(p1++)
     println(++p1)
 
