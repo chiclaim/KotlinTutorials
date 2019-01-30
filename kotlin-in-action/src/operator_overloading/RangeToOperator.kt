@@ -21,4 +21,22 @@ fun main(args: Array<String>) {
     println(nowDate.plusWeeks(1) in vacation)
 
 
+    for (i in (0..10)){
+        println(i)
+    }
+
+
+    val a = 0..10
+    println(a.javaClass) //class kotlin.ranges.IntRange
+
+
+
+    val personRange = Person("chiclaim",28)..Person("steve",56)
+    println(personRange.javaClass) //class kotlin.ranges.ComparableRange
+
+    val zucker = Person("zuckerberg",34)
+
+    println(zucker in personRange)
+
+
 }
