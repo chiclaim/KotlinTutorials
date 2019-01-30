@@ -27,9 +27,11 @@ fun main(args: Array<String>) {
     println(Point(5, 20) in rect)
 
 
-    //operator fun CharSequence.iterator()
-    for(c in "chiclaim"){
-        println(c)
+    val a = 'c' in "chiclaim"  //contains()
+    println("----$a")
+
+    for(value in "chiclaim"){//iterator()
+        println(value)
     }
 
     val list = listOf(1,2,3)
