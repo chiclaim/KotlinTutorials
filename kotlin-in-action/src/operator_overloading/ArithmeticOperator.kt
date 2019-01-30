@@ -22,10 +22,10 @@ operator fun Point.minus(other: Point): Point {
 fun main(args: Array<String>) {
     val p1 = Point(10, 30)
     val p2 = Point(20, 30)
-    println("plus ${p1 + p2}")
-    println("minus ${p1 - p2}")
-    println("times ${p1 * p2}")
-    println("div ${p1 / p2}")
+    println("plus: ${p1 + p2}")
+    println("minus: ${p1 - p2}")
+    println("times: ${p1 * p2}")
+    println("div: ${p1 / p2}")
 
 }
 
