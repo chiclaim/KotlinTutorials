@@ -48,10 +48,23 @@ fun main(args: Array<String>) {
 
     //没有定义plusAssign 则会调用 plus方法 相当于 p1 = p1 + p2
     p1 += p2
+    println("plusAssign: $p1")
+
+    p1 -= p2
+    println("minusAssign: $p1")
+
+    p1 *= p2
+    println("timesAssign: $p1")
+
+    p1 /= p2
+    println("divAssign: $p1")
+
+    p1 %= p2
+    println("remAssign: $p1")
+
 
     //p1 = p1 + p2
     //p1 += p2
 
-    println(p1)
 
 }
