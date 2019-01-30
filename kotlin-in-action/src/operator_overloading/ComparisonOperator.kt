@@ -12,9 +12,10 @@ package operator_overloading
 fun main(args: Array<String>) {
     val p1 = Person("chiclaim", 20)
     val p2 = Person("pony", 20)
-    println(p1 == p2) //equals
-    println(p1 > p2)  //compareTo(p1 , p2) > 0
-    println(p1 <= p2)  //compareTo(p1 , p2) <= 0
-
+    println(p1 == p2) //p1.equals(p2)
+    println(p1 > p2)  //p1.compareTo(p2) > 0
+    println(p1 >= p2)  //p1.compareTo(p2) >= 0
+    println(p1 < p2)  //p1.compareTo(p2) < 0
+    println(p1 <= p2)  //p1.compareTo(p2) <= 0
 
 }
