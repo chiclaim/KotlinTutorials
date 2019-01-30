@@ -49,5 +49,9 @@ fun main(args: Array<String>) {
     point[1] = 500
     println("x=${point["x"]}, y=${point["y"]}")
 
+
+    val map = hashMapOf("chiclaim" to 28) //声明一个可变集合
+    map["chiclaim"] = 18 //相当于 map.put("chiclaim", 18)
+    println(map["chiclaim"])  //相当于 println(map.get("chiclaim"))
 }
 
