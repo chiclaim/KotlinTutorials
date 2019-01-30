@@ -33,6 +33,17 @@ class Person(val name: String) {
         }
 
     private fun loadEmail() = listOf("chiclaim@gmail.com", "chiclaim@163.com")
+
+}
+
+//Kotlin lazy 的使用
+class Person2(val name: String) {
+    val emails by lazy {
+        loadEmail()
+    }
+
+    private fun loadEmail() = listOf("chiclaim@gmail.com", "chiclaim@163.com")
+
 }
 
 //Kotlin lazy 的使用
@@ -67,7 +78,7 @@ private class SynchronizedLazyImpl<out T>(initializer: () -> T, lock: Any? = nul
             }
             //下面进入同步代码块
             return synchronized(lock) {
-                //再判断一次是否是初始只，因为可能在同步代码块外有多个线程在等待
+                //再判断一次是否是初始值，因为可能多个线程在同步代码块处等待
                 val _v2 = _value
                 if (_v2 !== UNINITIALIZED_VALUE) {
                     @Suppress("UNCHECKED_CAST") (_v2 as T)
@@ -85,4 +96,5 @@ private class SynchronizedLazyImpl<out T>(initializer: () -> T, lock: Any? = nul
 
 fun main(args: Array<String>) {
     println(DelegatedProperty().friends)
+
 }
