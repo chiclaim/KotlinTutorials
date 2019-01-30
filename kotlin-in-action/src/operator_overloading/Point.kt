@@ -21,4 +21,8 @@ class Point(var x: Int, var y: Int) {
         return Point(x % other.x, y % other.y)
     }
 
+    override fun toString(): String {
+        return "Point[$x, $y]"
+    }
+
 }

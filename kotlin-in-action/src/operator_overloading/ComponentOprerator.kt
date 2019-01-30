@@ -7,7 +7,6 @@ package operator_overloading
 
 
 operator fun Point.component1() = x
-
 operator fun Point.component2() = y
 
 
@@ -15,6 +14,15 @@ fun getPoint(): Point {
     return Point(1, 2)
 }
 
+
+fun getMaxMin(): Pair<Int, Int> {
+    //省略获取最大值最小值的逻辑...
+
+    val min: Int = 5
+    val max: Int = 10
+    return Pair(min, max)
+
+}
 
 fun main(args: Array<String>) {
     val p1 = Point(10, 19)
@@ -31,7 +39,15 @@ fun main(args: Array<String>) {
         println("$key -> $value")
     }
 
+
+    //集合最多支持声明5个变量
+    val (v1, v2, v3, v4, v5) = listOf(1, 2, 3, 4, 5, 6)
+
+    val (min, max) = getMaxMin()
+
 }
+
+
 
 
 
