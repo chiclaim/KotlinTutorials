@@ -12,5 +12,5 @@ enum class Color(val r: Int, val g: Int, val b: Int ){ //枚举常量属性
     VIOLET(238, 130, 238); //最后一个枚举对象需要分号结尾
 
     // 在枚举类中定义函数
-    fun funrgb() = (r * 256 + g) * 256 + b
+    fun rgb() = (r * 256 + g) * 256 + b
 }
