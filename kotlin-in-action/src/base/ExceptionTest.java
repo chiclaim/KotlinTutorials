@@ -24,7 +24,7 @@ public class ExceptionTest {
         return Integer.parseInt(line);
     }
 
-    int readNumber3( BufferedReader reader) throws IOException {
+    /*int readNumber3( BufferedReader reader) throws IOException {
         try (reader) {
             String line = reader.readLine(); // throws IOException
             return Integer.parseInt(line);   // throws NumberFormatException
@@ -34,10 +34,10 @@ public class ExceptionTest {
         // throws IOException
 
     }
+*/
 
 
-
-    public static void main(String args){
+    public static void main(String[] args){
         ExceptionTestKt.readNumber(null);
     }
 }
