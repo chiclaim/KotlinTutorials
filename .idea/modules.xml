@@ -6,6 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.chiclaim.coroutine-in-action.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.chiclaim.coroutine-in-action.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.chiclaim.coroutine-in-action.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.chiclaim.coroutine-in-action.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/coroutine.iml" filepath="$PROJECT_DIR$/.idea/modules/coroutine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coroutine-in-action.iml" filepath="$PROJECT_DIR$/.idea/modules/coroutine-in-action.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coroutine-in-action.main.iml" filepath="$PROJECT_DIR$/.idea/modules/coroutine-in-action.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coroutine-in-action.test.iml" filepath="$PROJECT_DIR$/.idea/modules/coroutine-in-action.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-in-action/kotlin-in-action.iml" filepath="$PROJECT_DIR$/kotlin-in-action/kotlin-in-action.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-study.iml" filepath="$PROJECT_DIR$/kotlin-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/other_module/other_module.iml" filepath="$PROJECT_DIR$/other_module/other_module.iml" />
