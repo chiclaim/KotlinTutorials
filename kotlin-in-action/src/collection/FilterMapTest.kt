@@ -21,13 +21,13 @@ fun filterTest() {
     //找出年龄最大的人（可能存在多个）
     //我们在filter里面使用了maxBy函数，底层通过嵌套循环实现的，效率低(O(n^2)))
     list.filter { person ->
-        person.age == list.maxBy(Person::age)!!.age
+        person.age == list.maxByOrNull {it.age}?.age
     }.apply {
         println(this)
     }
 
     //上面问题的改良版，把嵌套循环扁平化(O(n))
-    val maxAge = list.maxBy(Person::age)?.age
+    val maxAge = list.maxByOrNull { it.age }?.age
     list.filter { person ->
         person.age == maxAge
     }.apply {
