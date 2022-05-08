@@ -1,11 +1,5 @@
 
-## 技术文章链接
-
-- [从Java角度深入理解Kotlin](https://chiclaim.blog.csdn.net/article/details/85575213)
-- [Kotlin从入门到进阶](https://chiclaim.blog.csdn.net/article/details/88624808)
-- [Kotlin操作符重载详解](https://chiclaim.blog.csdn.net/article/details/86706874)
-
-## 从Java角度深入理解Kotlin
+## Kotlin 入门到进阶
 
 1. Kotlin数据类型、访问修饰符
    1. Kotlin和Java数据类型对比
@@ -31,4 +25,4 @@
    1. kotlin集合创建方式有哪些
    2. kotlin集合的常用的函数
    3. Kotlin集合Sequence原理
-7. Koltin和Java交互的一些问题
+7. Kotlin和Java交互的一些问题
