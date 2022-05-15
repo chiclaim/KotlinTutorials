@@ -1,4 +1,3 @@
-
 ## 1、空安全
 
 Kotlin 中包含可空类型（Nullable types）和不可空类型（Non-Null Types），任何复杂类型都包括可空类型和不可空类型，例如下面的 String 类型：
@@ -15,9 +14,9 @@ fun main() {
 ```kotlin
 fun main() {
     var name: String? // 可空类型
-    var name2: String // 不可控类型
-    
-	name = null  // 合法
+    var name2: String // 不可空类型
+
+    name = null  // 合法
     name2 = null // 编译器报错
 }
 ```
@@ -26,16 +25,32 @@ fun main() {
 
 ```kotlin
 fun main() {
-    var name2: String // 不可控类型
+    var name2: String? // 可空类型
     test(name2) // 编译报错
 }
 
-fun test(str:String) {
+fun test(str: String) {
     //...
 }
 ```
 
-Kotlin 的类型体系（后面会详细介绍）目标就是消除危险的空引用的危险。像 Java 中如果一个空引用调用方法就会抛出空指针异常。
+集合的元素如果声明为不可空，那么不能将可空的元素添加到集合中：
+
+```kotlin
+val intList: MutableList<Int> = mutableListOf()
+var intValue: Int? = null
+intList.add(intValue)
+```
+
+将元素可空的集合转成元素不可空的集合：
+
+```kotlin
+val nullableList: List<Int?> = listOf(1, 2, null, 4)
+val intList: List<Int> = nullableList.filterNotNull()
+```
+
+
+Kotlin 的类型体系（后面会详细介绍）目标就是消除危险的空引用。像 Java 中如果一个空引用调用方法就会抛出空指针异常。
 
 那么 Kotlin 是如何保证空安全的呢？
 
@@ -62,7 +77,6 @@ if(name != null){
 ```
 
 可见 `?.` 操作符相对于 Java 来说帮我们减少了大量的代码。
-
 
 **需要注意的时候，通过安全调用操作符`?.` 返回的类型也是可空类型。**
 
@@ -93,7 +107,6 @@ val len: Int = if (b != null) b.length else -1
 val len = b?.length ?: -1
 ```
 
-
 ### 安全强转
 
 在 Java 中被强转的对象不是目标类型，强制转换会抛出 ClassCastException，在 Kotlin 中可以使用 `as?` 进行安全转换：
@@ -104,7 +117,6 @@ val str: String? = value as? String
 
 如果强制转换失败，则 `str = null`
 
-
 ### 非空断言
 
 非空断言运算符：`!!`，对一个可空类型的变量上使用非空断言，就是像编译器保证该变量不为空，当运行时发现该变量为 null 时，则抛出 `NullPointException`
@@ -114,7 +126,6 @@ val len = b!!.length
 ```
 
 尽可能的不要使用非空断言，因为它可能导致空指针。
-
 
 ## 2、实战中的编程小技巧
 
@@ -127,24 +138,25 @@ var str: String? = null
 
 fun test() {
     if (str != null) {
-		// 其他代码
+        // 其他代码
         println(str)
-        if(str.length>10){ // 编译报错，但是我不想使用非空断言 !!
+        if (str.length > 10) { // 编译报错，但是我不想使用非空断言 !!
             todo
-		}
+        }
     }
 }
 ```
+
 原因很简单， 因为 str 是可变的，虽然你在前面判断是否为空，但是在判断后，其他代码可能又设置为 null 了，所以编译器会报错。
 
 你可以使用 let 函数来解决：
 
 ```kotlin
 str?.let {
-	println(str)
-	if(it.length>10){
-		todo
-	}
+    println(str)
+    if (it.length > 10) {
+        todo
+    }
 }
 ```
 
@@ -153,13 +165,12 @@ str?.let {
 ```kotlin
 val s = str ?: return
 println(str)
-if(s.length>10){
-	todo
+if (s.length > 10) {
+    todo
 }
 ```
 
 经过以上改造，你的 Kotlin 更加 Native
-
 
 ### 技巧2
 
@@ -177,7 +188,7 @@ fun test() {
 
 ```kotlin
 fun test() {
-    if (str?.length ?: -1 > 10) {
+    if ((str?.length ?: -1) > 10) {
         println(str)
     }
 }
@@ -198,7 +209,7 @@ fun test() {
 
 ```kotlin
 fun test() {
-    if (user?.isAdult == true) { // 编译器报错
+    if (user?.isAdult == true) {
         //...
     }
 }
