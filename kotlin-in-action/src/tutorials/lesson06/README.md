@@ -157,13 +157,13 @@ class Test{ // must be in a Class
 
 表格一：类访问修饰符：
 
-|类访问修饰符 |	Java可访问级别 | Kotlin可访问级别|
-|---          |---              |---|
-| public	     |均可访问	       |均可访问|
-| protected	 |同包名	       |同包名也不可访问|
-| internal	 |不支持该修饰符   |同模块内可见|
-| default	     |同包名下可访问   |相当于public|
-| private      |当前文件可访问   |当前文件可访问|
+|类访问修饰符 |	Java可访问级别 | Kotlin可访问级别 |
+|---          |---              |-------------|
+| public	     |均可访问	       | 均可访问        |
+| protected	 |同包名	       | 同包名也不可直接访问  |
+| internal	 |不支持该修饰符   | 同模块内可见      |
+| default	     |同包名下可访问   | 相当于public   |
+| private      |当前文件可访问   | 当前文件可访问     |
 
 表格二：类成员访问修饰符：
 
@@ -195,7 +195,7 @@ internal 修饰符是 Kotlin 独有而 Java 中没有的。internal 修饰符意
 
 而在 Kotlin 中就算是同包名的类也不能访问 protected 修饰的类。
 
-为了测试 protected 修饰符修饰类，我在写 demo 的时候，发现 protected 修饰符不能修饰顶级类，只能放在内部类上。
+为了测试 protected 修饰符修饰类，我在写 demo 的时候，发现 protected 修饰符不能修饰 Java 的顶级类，只能放在内部类上。
 
 为什么不能修饰顶级类？
 

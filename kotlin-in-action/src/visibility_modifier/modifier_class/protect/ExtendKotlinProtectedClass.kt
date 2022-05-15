@@ -1,4 +1,6 @@
-package visibility_modifier.modifier_class
+package visibility_modifier.modifier_class.protect
+
+import visibility_modifier.modifier_class.protect.ProtectedClassTest
 
 /**
  * Desc:
