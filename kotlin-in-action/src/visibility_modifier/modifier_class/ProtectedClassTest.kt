@@ -4,7 +4,7 @@ package visibility_modifier.modifier_class
  * Desc: kotlin protected class 演示
  *
  * Created by Chiclaim on 2018/9/21.
- */
+ */ 
 open class ProtectedClassTest {
 
     //protected class 只能在当前包可见 这点和Java是一样的

@@ -5,7 +5,7 @@ package visibility_modifier.modifier_class
  * Created by Chiclaim on 2018/9/21.
  */
 
-//---- Kotlin就算同包名下也不能继承 protected class 这和Java不一样
+//---- Kotlin就算同包名下也不能直接继承 protected class 这和Java不一样
 class ExtendKotlinProtectedClass //: ProtectedClassTest.ProtectedClass()
 
 //---- Kotlin就算同包名下也不能访问 protected class
@@ -27,6 +27,7 @@ class ExtendKotlinProtectedClass2 : ProtectedClassTest() {
 
     private var protectedClass: ProtectedClass? = null
 
+    // 外部类ExtendKotlinProtectedClass2继承ProtectedClass的外部类，才能让 A 继承 ProtectedClass
     protected class A : ProtectedClass() {
 
     }
