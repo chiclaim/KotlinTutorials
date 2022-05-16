@@ -20,7 +20,11 @@
 
 
 
-乍一看，只是换了一个名字而已，其实内部细节远不止这些。举个例子，`var num:Int?` 编译后 num 是 Integer 类型，但是 `var num: Int = 0` 编译后 num 是 int 基本类型。从中可以看出代码的细微差别，会导致编译后的代码有比较大的差别。
+乍一看，只是换了一个名字而已，其实内部细节远不止这些。
+
+举个例子，`var num:Int?` 编译后 num 是 Integer 类型，但是 `var num: Int = 0` 编译后 num 是 int 基本类型。
+
+从中可以看出代码的细微差别，会导致编译后的代码有比较大的差别。
 
 下面来分析下哪些情况编译是成 Java 中的基本类型还是包装类型。下面以整型为例，其他的数据类型同理。
 
@@ -37,11 +41,29 @@ var width2: Int? = null
 编译后的代码：
 
 ```java
-class TestKt {
+public final class MainKt {
     @Nullable
     private static Integer width = 10;
     @Nullable
     private static Integer width2;
+
+    @Nullable
+    public static final Integer getWidth() {
+        return width;
+    }
+
+    public static final void setWidth(@Nullable Integer var0) {
+        width = var0;
+    }
+
+    @Nullable
+    public static final Integer getWidth2() {
+        return width2;
+    }
+
+    public static final void setWidth2(@Nullable Integer var0) {
+        width2 = var0;
+    }
 }
 ```
 
@@ -60,7 +82,7 @@ fun getAge2(): Int? {
 反编译后：
 
 ```java
-public final class TestKt {
+public final class MainKt {
    public static int getAge() {
       return 0;
    }
@@ -93,7 +115,8 @@ fun getAge4(): Array<Int> {
 ```
 
 
-//看下编译后的代码：
+看下编译后的代码：
+
 ```java
 class Test { // must be in a Class
     @NotNull
