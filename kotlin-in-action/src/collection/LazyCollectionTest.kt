@@ -9,18 +9,27 @@ import lambda.list
  * Created by Chiclaim on 2018/09/23
  */
 
+// 创建 sequence:
+// sequenceOf
+// asSequence
+// generateSequence
 
 fun main(args: Array<String>) {
+
+//    collectionTest()
 //    lazyCollectionTest()
 //    println("============================")
-//    lazyCollectionTest2()
+    lazyCollectionTest2()
 
-    lazyCollectionTest3()
+//    lazyCollectionTest3()
 }
 
 fun collectionTest() {
+    // 没经过一个操作符 都会创建一个临时的集合，用于保存中间结果
     list.map(Person::age).filter { age ->
         age > 18
+    }.forEach {
+        println(it)
     }
 
     /*
