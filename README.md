@@ -21,17 +21,21 @@
 
 - [x] [Kotlin入门到进阶(9)——深入理解 Kotlin 集合、序列](https://www.bilibili.com/video/BV1o54y1Z7s3/)
 
+- [x] [Kotlin入门到进阶(10)——聊一聊 Kotlin String](https://www.bilibili.com/video/BV1z3411G7gA/)
+
+- [x] [Kotlin入门到进阶(11)——再谈 Kotlin 函数](https://www.bilibili.com/video/BV13F411j7mF/)
+
+
 接下来，会更新的主题：
 
-- [ ] 字符串
-- [ ] 比较操作符
-- [ ] 函数参数、匿名函数、局部函数、扩展函数
+
 - [ ] 创建 Class
 - [ ] Enum 起源
 - [ ] Kotlin Exception 设计理念
 - [ ] 注解、反射
 - [ ] Lambda
 - [ ] 高阶函数
+- [ ] inline crossinline noinline
 - [ ] 泛型
 - [ ] return、continue
 - [ ] 协程
