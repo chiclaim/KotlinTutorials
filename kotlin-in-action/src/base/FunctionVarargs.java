@@ -48,7 +48,8 @@ public class FunctionVarargs<E> {
 
         //把 二维数组 传递 给 参数 是 一维泛型数组 的函数
         int[][] intArray = {{1},{2}};
-        testGeneric(intArray);
+        // T[] ts = intArray
+        testGeneric(intArray); // T[]
 
     }
 
