@@ -1,9 +1,46 @@
 
 ## Kotlin 入门到进阶
 
-1. Kotlin数据类型、访问修饰符
-   1. Kotlin和Java数据类型对比
-   2. Kotlin和Java访问修饰符对比
+教程：
+
+- [x] [Kotlin入门到进阶(1)——前言](https://www.bilibili.com/video/BV1hR4y1A7Vu/)
+
+- [x] [Kotlin入门到进阶(2)——变量、函数入门](https://www.bilibili.com/video/BV1Ur4y1t7a3/)
+
+- [x] [Kotlin入门到进阶(3)——表达式、语句及与 Java 的对比](https://www.bilibili.com/video/BV1r54y1f7gT/)
+
+- [x] [Kotlin入门到进阶(4)——结构化编程：顺序结构、选择结构、循环结构](https://www.bilibili.com/video/BV1bu41167Dr/)
+
+- [x] [Kotlin入门到进阶(5)——空安全(Null Safety)和实战技巧](https://www.bilibili.com/video/BV1AY4y1t7hX/)
+
+- [x] [Kotlin入门到进阶(6)——类型系统和访问修饰符详解](https://www.bilibili.com/video/BV18Y4y1z7h8/)
+
+- [x] [Kotlin入门到进阶(7)——数组类型和它的扩展函数](https://www.bilibili.com/video/BV1RB4y1y7bU/)
+
+- [x] [Kotlin入门到进阶(8)——Nothing 类型, 不为人知的细节](https://www.bilibili.com/video/BV1SR4y1c7Xm/)
+
+- [x] [Kotlin入门到进阶(9)——深入理解 Kotlin 集合、序列](https://www.bilibili.com/video/BV1o54y1Z7s3/)
+
+接下来，会更新的主题：
+
+- [ ] 字符串
+- [ ] 比较操作符
+- [ ] 函数参数、匿名函数、局部函数、扩展函数
+- [ ] 创建 Class
+- [ ] Enum 起源
+- [ ] Kotlin Exception 设计理念
+- [ ] 注解、反射
+- [ ] Lambda
+- [ ] 高阶函数
+- [ ] 泛型
+- [ ] return、continue
+- [ ] 协程
+
+
+<hr/>
+
+
+
 2. Kotlin中的Class和Interface
    1. Kotlin中声明类的几种方式
    2. Kotlin中interface原理分析
