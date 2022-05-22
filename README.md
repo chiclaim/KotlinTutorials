@@ -30,6 +30,8 @@
 
 
 - [ ] 创建 Class
+- [ ] 属性代理
+- [ ] 属性与字段的区别 property vs field
 - [ ] Enum 起源
 - [ ] Kotlin Exception 设计理念
 - [ ] 注解、反射

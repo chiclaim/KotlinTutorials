@@ -4,7 +4,7 @@ package new_class
  * Desc: 自动生成构造方法和getter演示
  * Created by Chiclaim on 2018/9/19.
  */
-class Person(val name: String) //只会生成name的getter方法
+class Person (val name: String) //只会生成name的getter方法
 
 /*
 

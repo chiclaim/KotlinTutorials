@@ -8,11 +8,7 @@ class Person4 constructor(var name: String)
 //和上面等价 class Person4 (var name: String)
 
 class Person4_ constructor(name: String) {
-    var name:String?=null
 
-    init {
-        this.name = name
-    }
 }
 //和上面等价 class Person4_ (name: String)
 

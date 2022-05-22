@@ -27,7 +27,7 @@ class Impl : InterfaceTest {
 
 /*
 
-Java中的接口是不允许有变量和方法的，那么Kotlin是如何实现的呢？
+Java8之前的接口是不允许有变量和方法的，那么Kotlin是如何实现的呢？
 
 Kotlin 接口中的变量底层只是setter和setter方法
 Kotlin 接口中的方法并不是真的有方法体，底层也只有声明。只是在接口的内部新建一个静态内部类

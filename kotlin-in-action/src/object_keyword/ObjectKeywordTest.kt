@@ -14,7 +14,7 @@ class ObjectKeywordTest {
         //私有常量
         val GENDER: Int = FEMALE
 
-        //私有静态变量
+        //静态变量
         var username: String = "chiclaim"
 
         //静态方法
