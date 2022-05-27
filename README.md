@@ -25,13 +25,17 @@
 
 - [x] [Kotlin入门到进阶(11)——再谈 Kotlin 函数](https://www.bilibili.com/video/BV13F411j7mF/)
 
+- [x] [Kotlin入门到进阶(12)——彻底搞懂 Class 和 Interface](https://www.bilibili.com/video/BV1ev4y1A7kM/)
+
+- [x] [Kotlin入门到进阶(13)——Java Property 和 Field 你真的懂么？](https://www.bilibili.com/video/BV1At4y1s7sE/)
+
+- [x] [Kotlin入门到进阶(14)——lateinit property 案例实战](https://www.bilibili.com/video/BV1CY4y1678g/)
+
+
 
 接下来，会更新的主题：
 
-
-- [ ] 创建 Class
 - [ ] 属性代理
-- [ ] 属性与字段的区别 property vs field
 - [ ] Enum 起源
 - [ ] Kotlin Exception 设计理念
 - [ ] 注解、反射
