@@ -1,4 +1,4 @@
-package delegated_property
+package delegated
 
 import java.beans.PropertyChangeListener
 import java.beans.PropertyChangeSupport
@@ -6,7 +6,7 @@ import kotlin.properties.Delegates
 import kotlin.reflect.KProperty
 
 /**
- * Desc: Implementing delegated property
+ * Desc: Implementing delegated property listener
  * Created by Chiclaim on 2018/9/30.
  */
 
@@ -53,9 +53,10 @@ fun testImp1() {
 
 //========上面的setter方法都是重复代码，下面改造一下 starting========
 class ObservableProperty(
-        private val propName: String,
-        private var propValue: Int,
-        private val changeSupport: PropertyChangeSupport) {
+    private val propName: String,
+    private var propValue: Int,
+    private val changeSupport: PropertyChangeSupport
+) {
     fun getValue(): Int = propValue
     fun setValue(newValue: Int) {
         val oldValue = propValue
@@ -93,8 +94,9 @@ fun testImp2() {
 
 //=========继续进行改造，使用操作符重载和by关键字 starting=======
 class ObservableProperty2(
-        private var propValue: Int,
-        private val changeSupport: PropertyChangeSupport) {
+    private var propValue: Int,
+    private val changeSupport: PropertyChangeSupport
+) {
     operator fun getValue(p: People3, pro: KProperty<*>): Int = propValue
     operator fun setValue(p: People3, pro: KProperty<*>, newValue: Int) {
         val oldValue = propValue
@@ -129,7 +131,9 @@ class People4(val name: String, age: Int, salary: Int) : PropertyChangeAware() {
         changeSupport.firePropertyChange(prop.name, oldValue, newValue)
     }
     var age: Int by Delegates.observable(age, observer)
-    var salary: Int by Delegates.observable(salary, observer)
+    var salary: Int by Delegates.observable(salary) { property, old, new ->
+        println("---Property ${property.name} changed from $old to $new")
+    }
 }
 
 fun testImp4() {

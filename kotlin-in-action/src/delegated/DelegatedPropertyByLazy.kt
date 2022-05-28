@@ -1,4 +1,4 @@
-package delegated_property
+package delegated
 
 /**
  * Desc: delegated property
@@ -38,7 +38,7 @@ class Person(val name: String) {
 
 //Kotlin lazy 的使用
 class Person2(val name: String) {
-    val emails by lazy {
+    val emails:List<String> by lazy {
         loadEmail()
     }
 

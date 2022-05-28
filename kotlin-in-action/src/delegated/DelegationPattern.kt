@@ -1,7 +1,7 @@
 package new_class
 
 /**
- * Desc: Kotlin 代理类 演示
+ * Desc: Kotlin 简化委托模式 演示
  * Created by Chiclaim on 2018/9/20.
  */
 
@@ -44,6 +44,30 @@ fun main(args: Array<String>) {
     k.run()
 }
 
+/*
+class UserRepository constructor(val userSource: IUserSource) : IUserSource{
 
+    override fun login(telephone:String, code:String){
+        userSource.login(telephone,code)
+    }
+
+    override fun register(telephone:String, code:String){
+        userSource.register(telephone,code)
+    }
+
+    ...//省略其他业务
+}
+
+// 简化为：
+
+class UserRepository constructor(userSource: IUserSource) : IUserSource by userSource
+
+
+
+
+
+
+
+ */
 
 
