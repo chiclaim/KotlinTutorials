@@ -1,4 +1,5 @@
 
+> kotlin-in-action/delegated
 
 # 属性委托
 
@@ -6,8 +7,7 @@
     - by
     - by lazy
     - by Delegates.observable
-    - by map
-    - Kotlin 如何简化委托模式
+
 
 - by 使用、原理
     - 属性字节码生成机制

@@ -1,4 +1,4 @@
-package new_class
+package delegated
 
 /**
  * Desc: Kotlin 简化委托模式 演示
@@ -22,14 +22,25 @@ class Kangaroo : IAnimal {
 
 }
 
-//注意：如果使用val/var修饰了构造方法参数，记得要设置private，否则就暴露了被代理的对象了
-class KangarooDelegate(private val kangaroo: Kangaroo = Kangaroo()) : IAnimal by kangaroo {
+class KangarooDelegate(private val kangaroo: Kangaroo = Kangaroo()) : IAnimal{
+    override fun eat() {
+        kangaroo.eat()
+    }
 
-    //假如 需要对run方法进行增强改造
     override fun run() {
         kangaroo.run()
-        println("shout...")
     }
+
+}
+
+//注意：如果使用val/var修饰了构造方法参数，记得要设置private，否则就暴露了被代理的对象了
+class KangarooDelegate2(private val kangaroo: Kangaroo = Kangaroo()) : IAnimal by kangaroo {
+
+    //假如 需要对run方法进行增强改造
+//    override fun run() {
+//        kangaroo.run()
+//        println("shout...")
+//    }
 
     //kotlin会替我们生成其他代理方法，如 eat 方法
     /*
@@ -40,7 +51,7 @@ class KangarooDelegate(private val kangaroo: Kangaroo = Kangaroo()) : IAnimal by
 }
 
 fun main(args: Array<String>) {
-    val k = KangarooDelegate()
+    val k = KangarooDelegate2()
     k.run()
 }
 
@@ -61,13 +72,6 @@ class UserRepository constructor(val userSource: IUserSource) : IUserSource{
 // 简化为：
 
 class UserRepository constructor(userSource: IUserSource) : IUserSource by userSource
-
-
-
-
-
-
-
  */
 
 
