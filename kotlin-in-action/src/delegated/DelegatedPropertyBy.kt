@@ -19,6 +19,9 @@ class Delegate {
 
 class Example {
     var p: String by Delegate()
+
+    // setter  ->  setValue
+    // getter  ->  getValue
 }
 
 fun main() {
@@ -26,6 +29,8 @@ fun main() {
     val e = Example()
     e.p = "kumushuoshuo"
     println(e.p)
+}
 
-
+class P {
+    var name:String = "kumushuoshsuo"
 }

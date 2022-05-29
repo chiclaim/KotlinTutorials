@@ -42,7 +42,7 @@ class People(val name: String, age: Int, salary: Int) : PropertyChangeAware() {
 }
 
 fun testImp1() {
-    val p = People("chiclaim", 18, 3500)
+    val p = People("kumushuoshuo", 18, 3500)
     p.addPropertyChangeListener(PropertyChangeListener { event ->
         println("event source: ${event.source}")
         println("Property ${event.propertyName} changed from ${event.oldValue} to ${event.newValue}")
@@ -81,7 +81,7 @@ class People2(val name: String, age: Int, salary: Int) : PropertyChangeAware() {
 }
 
 fun testImp2() {
-    val p2 = People2("chiclaim", 28, 13500)
+    val p2 = People2("kumushuoshuo", 28, 13500)
     p2.addPropertyChangeListener(PropertyChangeListener { event ->
         //println("event source: ${event.source}")
         println("Property ${event.propertyName} changed from ${event.oldValue} to ${event.newValue}")
@@ -112,7 +112,7 @@ class People3(val name: String, age: Int, salary: Int) : PropertyChangeAware() {
 }
 
 fun testImp3() {
-    val p3 = People3("chiclaim", 38, 74500)
+    val p3 = People3("kumushuoshuo", 38, 74500)
     p3.addPropertyChangeListener(PropertyChangeListener { event ->
         //println("event source: ${event.source}")
         println("Property ${event.propertyName} changed from ${event.oldValue} to ${event.newValue}")
@@ -137,7 +137,7 @@ class People4(val name: String, age: Int, salary: Int) : PropertyChangeAware() {
 }
 
 fun testImp4() {
-    val p4 = People4("chiclaim", 48, 104500)
+    val p4 = People4("kumushuoshuo", 48, 104500)
     p4.addPropertyChangeListener(PropertyChangeListener { event ->
         //println("event source: ${event.source}")
         println("Property ${event.propertyName} changed from ${event.oldValue} to ${event.newValue}")
