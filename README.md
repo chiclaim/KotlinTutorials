@@ -31,12 +31,16 @@
 
 - [x] [Kotlin入门到进阶(14)——lateinit property 案例实战](https://www.bilibili.com/video/BV1CY4y1678g/)
 
+- [x] [Kotlin入门到进阶(15)——深入理解属性代理(一) by lazy、Delegates.observable](https://www.bilibili.com/video/BV1j3411V7Ve/)
+
+- [x] [Kotlin入门到进阶(16)——深入理解属性委托(二) 代码演示 LazyThreadSafetyMode 的区别](https://www.bilibili.com/video/BV18Z4y147b2/)
+
+- [x] [Kotlin入门到进阶(17)——深入理解属性委托(三) by map 和委托模式](https://www.bilibili.com/video/BV1at4y1p7iB/)
 
 
 接下来，会更新的主题：
 
-- [ ] 属性代理
-- [ ] Enum 起源
+- [ ] Kotlin 1.6 枚举新特性
 - [ ] Kotlin Exception 设计理念
 - [ ] 注解、反射
 - [ ] Lambda
