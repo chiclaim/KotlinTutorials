@@ -1,7 +1,7 @@
 
 ## Kotlin 入门到进阶
 
-教程：
+我的《Kotlin入门到进阶》视频教程：
 
 - [x] [Kotlin入门到进阶(1)——前言](https://www.bilibili.com/video/BV1hR4y1A7Vu/)
 
