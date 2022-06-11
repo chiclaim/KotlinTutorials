@@ -37,10 +37,13 @@
 
 - [x] [Kotlin入门到进阶(17)——深入理解属性委托(三) by map 和委托模式](https://www.bilibili.com/video/BV1at4y1p7iB/)
 
+- [x] [Kotlin1.7 枚举、密封类新特性解读 & 枚举 VS 密封类](https://www.bilibili.com/video/BV1vZ4y1t7Gr/)
+
+
 
 接下来，会更新的主题：
 
-- [ ] Kotlin 1.6 枚举新特性
+- [ ] Kotlin操作符重载全解
 - [ ] Kotlin Exception 设计理念
 - [ ] 注解、反射
 - [ ] Lambda
