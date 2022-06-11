@@ -17,5 +17,6 @@ fun main(args: Array<String>) {
     println(p1 >= p2)  //p1.compareTo(p2) >= 0
     println(p1 < p2)  //p1.compareTo(p2) < 0
     println(p1 <= p2)  //p1.compareTo(p2) <= 0
+    println(p1 != p2)  // ! p1.equals(p2)
 
 }
