@@ -27,7 +27,7 @@
 - [x] [Kotlin入门到进阶(22)——枚举(五) 枚举的最佳实践](https://www.bilibili.com/video/BV1oY411T7d2/)
 - [x] [Kotlin1.7 枚举、密封类新特性解读 & 枚举 VS 密封类](https://www.bilibili.com/video/BV1vZ4y1t7Gr/)
 - [x] [Kotlin入门到进阶(24)——操作符重载全解](https://www.bilibili.com/video/BV1LZ4y1q7hE/)
-- [] [Kotlin入门到进阶(25)——优雅的文件 I/O 操作](https://www.bilibili.com/video/BV1Jt4y1H7ru/)
+- [x] [Kotlin入门到进阶(25)——优雅的文件 I/O 操作](https://www.bilibili.com/video/BV1Jt4y1H7ru/)
 
 接下来，会更新的主题：
 
