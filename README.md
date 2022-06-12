@@ -15,7 +15,7 @@
 - [x] [Kotlin入门到进阶(10)——聊一聊 Kotlin String](https://www.bilibili.com/video/BV1z3411G7gA/)
 - [x] [Kotlin入门到进阶(11)——再谈 Kotlin 函数](https://www.bilibili.com/video/BV13F411j7mF/)
 - [x] [Kotlin入门到进阶(12)——彻底搞懂 Class 和 Interface](https://www.bilibili.com/video/BV1ev4y1A7kM/)
-- [x] [Kotlin入门到进阶(13)——Java Property 和 Field 你真的懂么？](https://www.bilibili.com/video/BV1At4y1s7sE/)
+- [x] [Kotlin入门到进阶(13)——搞懂 Java Property 和 Field 的区别](https://www.bilibili.com/video/BV1At4y1s7sE/)
 - [x] [Kotlin入门到进阶(14)——lateinit property 案例实战](https://www.bilibili.com/video/BV1CY4y1678g/)
 - [x] [Kotlin入门到进阶(15)——深入理解属性代理(一) by lazy、Delegates.observable](https://www.bilibili.com/video/BV1j3411V7Ve/)
 - [x] [Kotlin入门到进阶(16)——深入理解属性委托(二) 代码演示 LazyThreadSafetyMode 的区别](https://www.bilibili.com/video/BV18Z4y147b2/)
