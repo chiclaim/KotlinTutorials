@@ -8,7 +8,7 @@ import java.io.IOException
 /*
  * 
  * @author kumushuoshuo
- * @github https://github.com/chiclaim/
+ * @github https://github.com/chiclaim/KotlinTutorials
  */
 
 fun readFile(path:String){

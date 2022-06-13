@@ -18,7 +18,7 @@ public class JavaException {
 
     }
 
-    // checked exception
+    // unchecked exception
     static void testError() throws StackOverflowError{
         testError();
         // do something ...
