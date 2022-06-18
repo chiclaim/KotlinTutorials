@@ -8,3 +8,5 @@
 
 - Kotlin 异常
   - Kotlin Java 异常的区别
+    - Kotlin 异常是一个表达式
+    - Kotlin 没有 checked exception
