@@ -1,5 +1,7 @@
 
-## 资料链节
+# Kotlin 异常（二）
+
+> Kotlin异常设计理念、异常API设计
 
 https://elizarov.medium.com/kotlin-and-exceptions-8062f589d07
 
