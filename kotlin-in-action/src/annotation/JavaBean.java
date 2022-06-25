@@ -1,14 +1,24 @@
 package annotation;
 
+import annotation.custom.FiledOnly;
+import annotation.custom.PropertyGetterOnly;
+
 /**
  * Desc:
  * Created by Chiclaim on 2018/10/15.
  */
 public class JavaBean {
-    //@PropertyOnly Kotlin定义的Property不能使用到Java属性上，可以使用AnnotationTarget.FIELD
+    // @PropertyOnly Kotlin 定义的 Property 注解不能使用到 Java 字段上，可以使用AnnotationTarget.FIELD
+    // 关于 Java 的 属性和字段的区别可以查看第 lesson13
     private String id;
 
     @FiledOnly
     private String name;
+
+    // @PropertyOnly 编译器报错 error
+    @PropertyGetterOnly
+    public String getName() {
+        return name;
+    }
 
 }
