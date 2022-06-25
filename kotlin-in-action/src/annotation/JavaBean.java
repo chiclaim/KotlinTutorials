@@ -1,6 +1,6 @@
 package annotation;
 
-import annotation.custom.FiledOnly;
+import annotation.custom.FieldOnly;
 import annotation.custom.PropertyGetterOnly;
 
 /**
@@ -12,7 +12,7 @@ public class JavaBean {
     // 关于 Java 的 属性和字段的区别可以查看第 lesson13
     private String id;
 
-    @FiledOnly
+    @FieldOnly
     private String name;
 
     // @PropertyOnly 编译器报错 error

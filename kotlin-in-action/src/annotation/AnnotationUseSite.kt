@@ -1,7 +1,7 @@
 package annotation
 
 import annotation.custom.Parameter
-import annotation.custom.FiledOnly
+import annotation.custom.FieldOnly
 import annotation.custom.Normal
 import annotation.custom.PropertyGetterOnly
 
@@ -10,7 +10,7 @@ import annotation.custom.PropertyGetterOnly
  * @author kumushuoshuo
  * @github https://github.com/chiclaim/
  */
-class AnnotationUseSite(@field:FiledOnly val name:String,    // annotate Java field
+class AnnotationUseSite(@field:FieldOnly val name:String,    // annotate Java field
                         @get:PropertyGetterOnly val age:Int,      // annotate Java getter
                         @param:Parameter val sex:Int) {   // annotate Java constructor parameter
 
