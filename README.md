@@ -25,15 +25,18 @@
 - [x] [Kotlin入门到进阶(20)——枚举(三)枚举的本质](https://www.bilibili.com/video/BV1W3411G7n9/)
 - [x] [Kotlin入门到进阶(21)——枚举(四)枚举 switch case 原理分析](https://www.bilibili.com/video/BV1SS4y1v7Pm/)
 - [x] [Kotlin入门到进阶(22)——枚举(五)枚举的最佳实践](https://www.bilibili.com/video/BV1oY411T7d2/)
-- [x] [Kotlin1.7 枚举、密封类新特性解读 & 枚举 VS 密封类](https://www.bilibili.com/video/BV1vZ4y1t7Gr/)
+- [x] [Kotlin入门到进阶(23)——Kotlin1.7 枚举、密封类新特性解读 & 枚举 VS 密封类](https://www.bilibili.com/video/BV1vZ4y1t7Gr/)
 - [x] [Kotlin入门到进阶(24)——操作符重载全解](https://www.bilibili.com/video/BV1LZ4y1q7hE/)
 - [x] [Kotlin入门到进阶(25)——优雅的文件 I/O 操作](https://www.bilibili.com/video/BV1Jt4y1H7ru/)
 - [x] [Kotlin入门到进阶(26)——异常(一) Kotlin 异常与 Java 的异同](https://www.bilibili.com/video/BV1SY4y1W76G/)
 - [x] [Kotlin入门到进阶(27)——异常(二) Kotlin异常设计理念、如何设计异常API](https://www.bilibili.com/video/BV1A3411u7UB/)
+- [x] [Kotlin入门到进阶(28)——注解](https://www.bilibili.com/video/BV1c3411w77q)
+
+
 
 接下来，会更新的主题：
 
-- [ ] 注解、反射
+- [ ] 反射
 - [ ] Lambda
 - [ ] return、continue
 - [ ] 高阶函数
