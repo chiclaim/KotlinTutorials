@@ -4,7 +4,7 @@ import kotlin.reflect.full.*
 
 
 fun main() {
-    val book = Book("Kotin入门到进阶", "kumushuoshuo")
+    val book = Book(1,"Kotin入门到进阶", "kumushuoshuo")
     val kClass = book::class
     println("simpleName = ${kClass.simpleName}")
     println("打印属性--------")
