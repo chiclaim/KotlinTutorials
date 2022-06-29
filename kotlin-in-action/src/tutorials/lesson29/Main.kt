@@ -6,7 +6,7 @@ package tutorials.lesson29
  * @github https://github.com/chiclaim/
  */
 
-
+// see kotlin-in-action/reflection
 fun main() {
 
 }
