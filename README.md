@@ -31,6 +31,9 @@
 - [x] [Kotlin入门到进阶(26)——异常(一) Kotlin 异常与 Java 的异同](https://www.bilibili.com/video/BV1SY4y1W76G/)
 - [x] [Kotlin入门到进阶(27)——异常(二) Kotlin异常设计理念、如何设计异常API](https://www.bilibili.com/video/BV1A3411u7UB/)
 - [x] [Kotlin入门到进阶(28)——注解](https://www.bilibili.com/video/BV1c3411w77q)
+- [x] [Kotlin入门到进阶(29)——深入理解反射](https://www.bilibili.com/video/BV13Y4y1n7X7/)
+- [x] [Kotlin入门到进阶(30)——深入理解 lambda 表达式](https://www.bilibili.com/video/BV1L34y1p7ax/)
+- [x] [Kotlin入门到进阶(31)——彻底搞懂高阶函数](https://www.bilibili.com/video/BV13T411g714/)
 
 
 
