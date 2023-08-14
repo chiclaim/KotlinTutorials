@@ -1,0 +1,5 @@
+
+rootProject.name = 'KotlinToturials'
+include 'kotlin-in-action'
+include 'other-module'
+
