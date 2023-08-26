@@ -1,5 +1,5 @@
 
-rootProject.name = 'KotlinToturials'
+rootProject.name = 'KotlinTutorials'
 include 'kotlin-in-action'
 include 'other-module'
 
