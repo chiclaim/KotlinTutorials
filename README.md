@@ -34,7 +34,7 @@
 - [x] [Kotlin入门到进阶(29)——深入理解反射](https://www.bilibili.com/video/BV13Y4y1n7X7/)
 - [x] [Kotlin入门到进阶(30)——深入理解 lambda 表达式](https://www.bilibili.com/video/BV1L34y1p7ax/)
 - [x] [Kotlin入门到进阶(31)——彻底搞懂高阶函数](https://www.bilibili.com/video/BV13T411g714/)
-- [ ] inline crossinline noinline
+- [x] [Kotlin入门到进阶(32)——inline、crossinline、noinline 解析](https://www.bilibili.com/video/BV1Kj41127p9/)
 - [ ] return、continue
 - [ ] 泛型
 - [ ] 协程
