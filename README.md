@@ -35,7 +35,7 @@
 - [x] [Kotlin入门到进阶(30)——深入理解 lambda 表达式](https://www.bilibili.com/video/BV1L34y1p7ax/)
 - [x] [Kotlin入门到进阶(31)——彻底搞懂高阶函数](https://www.bilibili.com/video/BV13T411g714/)
 - [x] [Kotlin入门到进阶(32)——inline、crossinline、noinline 解析](https://www.bilibili.com/video/BV1Kj41127p9/)
-- [ ] return、continue
+- [ ] [Kotlin入门到进阶(33)——return 和 loop jump](https://www.bilibili.com/video/BV1oj411y7x9/)
 - [ ] 泛型
 - [ ] 协程
 - [ ] Kotlin 和 Java 交互的一些问题
