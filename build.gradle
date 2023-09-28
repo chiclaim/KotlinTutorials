@@ -26,3 +26,7 @@ kotlin {
 application {
     mainClassName = 'MainKt'
 }
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
